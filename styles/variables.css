@@ -1,0 +1,42 @@
+
+:root {
+    --fs-xl:4rem;
+    --fs-lg:3.25rem;
+    --fs-md:2rem;
+    --fs-sm:1.4rem;
+    --fs-xsm:1rem;
+
+    --spacing-xxl:6rem;
+    --spacing-xl:4rem;
+    --spacing-lg:3rem;
+    --spacing-md:2rem;
+}
+
+@media (max-width:1024px){
+    :root{
+        --fs-xxl:3.25rem;
+        --fs-xl:2.5rem;
+        --fs-lg:2rem;
+        --fs-md:1.5rem;
+        --fs-sm:1.125rem;
+
+        --spacing-xxl:3rem;
+        --spacing-xl:2.5rem;
+        --spacing-md:1rem;
+    }
+}
+
+@media (max-width:768px){
+    :root{
+
+        --spacing-xxl:3rem;
+        --spacing-xl:1.5rem;
+        --spacing-md:1rem;
+    }
+}
+
+.text {
+    line-height: 140%;
+    color:#D3D3D3;
+    font-family: Arial, Helvetica, sans-serif;
+}

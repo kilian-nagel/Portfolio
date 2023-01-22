@@ -1,0 +1,115 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: black;
+    color:white;
+}
+
+/* Header
+=============== */
+
+#header {
+    padding:2rem var(--spacing-xl) 0 var(--spacing-xl);
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .dynamic-text::after {
+    content:'Bienvenue';
+    animation: text-changing 20s infinite;
+}
+
+@keyframes text-changing {
+    0%{opacity:1;content:'Bienvenue'}
+    23%{opacity:1;color:white}
+    28%{opacity:0;color:white;content:'Bienvenue'}/*transform: translateX(-1000%);*/
+    29%{opacity:0;content:'Welcome'}
+    33%{opacity:1;content:'Welcome';}
+    56%{opacity:1;}
+    61%{opacity:0;content:'Welcome'}
+    62%{opacity:0;content:'Bienvenido'}
+    66%{opacity:1;}
+    89%{opacity:1;content:'Bienvenido'}
+    94%{opacity:0;content:'Bienvenido'}
+    95%{opacity:0;content:'Bienvenue'}
+    100%{opacity:1;content:'Bienvenue';}
+}
+
+/* Home
+=============== */
+
+#home {
+    margin-top:var(--spacing-xxl);
+    padding:0 var(--spacing-xl);
+    display: flex;
+    gap:3rem;
+}
+
+#home .content {
+    padding:2rem 0;
+}
+
+#home h1 {
+    font-size:var(--fs-xl);
+    padding-bottom: 1rem;
+}
+
+#home .text {
+    font-size:var(--fs-sm);
+    line-height: 140%;
+    color:#D3D3D3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#home .img-wrapper .img {
+    background: url("./media/home.jpg") center/cover;
+    width: 400px;
+    height:400px;
+}
+
+@media screen and (max-width:1024px){
+    #home {flex-direction: column;}
+    #home .img-wrapper {display: none;}
+}
+
+/* Skills 
+=============== */
+
+#skills {
+    padding:0 var(--spacing-xl);
+    margin-top:var(--spacing-xxl);
+}
+
+#skills > .title {
+    font-size:var(--fs-lg);
+    margin-bottom:2rem;
+}
+
+#skills > .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+
+#skills h3 {
+    font-size: var(--fs-md);
+}
+
+#skills .container {
+    width:400px;
+    background:rgba(255,255,255,0.04);
+}
+
+#skills .container .content {
+    padding:2rem;
+}
+
+#skills .container .content .text {
+    padding-bottom:1rem;
+}
+
+#skills .container .list {
+    display: flex;
+    list-style-type: none;
+    gap:0.5rem;
+}
