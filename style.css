@@ -43,10 +43,11 @@ body {
     padding:0 var(--spacing-xl);
     display: flex;
     gap:3rem;
+    max-width: 1400px;
 }
 
 #home .content {
-    padding:2rem 0;
+    padding:2rem 0 0;
 }
 
 #home h1 {
@@ -72,16 +73,58 @@ body {
     #home .img-wrapper {display: none;}
 }
 
+/* Primary Nav
+============== */
+
+#primary-nav {
+    margin-top:var(--spacing-xxl);
+    padding:0 var(--spacing-xl);
+    position: relative;
+}
+
+#primary-nav .list {
+    list-style-type: none;
+    position: relative;
+}
+
+#primary-nav .list .link {
+    font-size:var(--fs-md);
+    position: relative;
+}
+
+#primary-nav .deco {
+    position: absolute;
+    display: none;
+    left:20px;
+    color:rgba(255,255,255,0.05);
+    font-size:var(--fs-xl);
+}
+
 /* Skills 
 =============== */
 
 #skills {
     padding:0 var(--spacing-xl);
     margin-top:var(--spacing-xxl);
+    padding-bottom: 2rem;
+    background: rgba(255,255,255,0.05);
+}
+
+#skills .decoration {
+    overflow: hidden;
+}
+
+#skills .title-decoration {
+    white-space: nowrap;
+    overflow: none;
+    padding-top:2rem;
+    font-size: var(--fs-xl);
+    color:rgba(255,255,255,0.05);
 }
 
 #skills > .title {
     font-size:var(--fs-lg);
+    padding-top:1rem;
     margin-bottom:2rem;
 }
 
@@ -93,23 +136,62 @@ body {
 
 #skills h3 {
     font-size: var(--fs-md);
+    margin-bottom: 1rem;
 }
 
-#skills .container {
-    width:400px;
-    background:rgba(255,255,255,0.04);
+#skills .content .container {
+    flex:1;
 }
 
-#skills .container .content {
-    padding:2rem;
-}
-
-#skills .container .content .text {
+#skills .content .container .content .text {
     padding-bottom:1rem;
 }
 
-#skills .container .list {
+#skills .content .container .list {
     display: flex;
     list-style-type: none;
+    flex-wrap: wrap;
     gap:0.5rem;
+}
+
+
+#skills .attributes .container {
+    max-width:540px;
+    padding-top:2rem;
+}
+
+#skills .attributes {
+    padding:2rem 0;
+}
+
+@media (max-width:900px) {
+    #skills .content{
+        flex-direction: column;
+    }
+}
+
+/* Projects 
+=============== */
+
+#projects {
+    background: white;
+    padding:2rem var(--spacing-xl);
+    color:black;
+}
+
+#projects .decoration {
+    overflow: hidden;
+}
+
+#projects .title-decoration {
+    white-space: nowrap;
+    overflow: none;
+    font-size: var(--fs-xl);
+    color:rgb(229,229,229);
+}
+
+#projects .title {
+    padding-top:1rem;
+    color:rgba(0,0,0,0.75);
+    font-size:var(--fs-lg)
 }
