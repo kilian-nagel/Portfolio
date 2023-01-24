@@ -6,6 +6,12 @@
     --fs-sm:1.4rem;
     --fs-xsm:1rem;
 
+    --clr-alto:#D3D3D3;
+    --clr-white:#FFFFFF;
+    --clr-black:#000000;
+    --clr-cod-gray:#0d0d0d;
+    --clr-tundora:#404040;
+
     --spacing-xxl:6rem;
     --spacing-xl:4rem;
     --spacing-lg:3rem;
@@ -28,7 +34,6 @@
 
 @media (max-width:768px){
     :root{
-
         --spacing-xxl:3rem;
         --spacing-xl:1.5rem;
         --spacing-md:1rem;
@@ -37,6 +42,6 @@
 
 .text {
     line-height: 140%;
-    color:#D3D3D3;
+    color:var(--clr-alto);
     font-family: Arial, Helvetica, sans-serif;
 }
