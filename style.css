@@ -35,6 +35,16 @@ body {
     100%{opacity:1;content:'Bienvenue';}
 }
 
+@keyframes scrollText {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
 /* Home
 =============== */
 
@@ -112,6 +122,7 @@ body {
 
 #skills .decoration {
     overflow: hidden;
+    display: flex;
 }
 
 #skills .title-decoration {
@@ -120,7 +131,7 @@ body {
     padding-top:2rem;
     font-size: var(--fs-xl);
     color:rgba(255,255,255,0.05);
-    animation: text-moving 8s infinite;
+    animation: scrollText 15s linear infinite;
     transition: none;
 }
 
@@ -189,9 +200,11 @@ body {
 
 #projects .decoration {
     overflow: hidden;
+    display: flex;
 }
 
 #projects .title-decoration {
+    animation: scrollText 15s linear infinite;
     white-space: nowrap;
     overflow: none;
     font-size: var(--fs-xl);
