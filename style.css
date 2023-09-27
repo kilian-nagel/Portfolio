@@ -22,7 +22,7 @@ body {
 @keyframes text-changing {
     0%{opacity:1;content:'Bienvenue'}
     23%{opacity:1;color:var(--clr-white)}
-    28%{opacity:0;color:var(--clr-white);content:'Bienvenue'}/*transform: translateX(-1000%);*/
+    28%{opacity:0;color:var(--clr-white);content:'Bienvenue'}
     29%{opacity:0;content:'Welcome'}
     33%{opacity:1;content:'Welcome';}
     56%{opacity:1;}
