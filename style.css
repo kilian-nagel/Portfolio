@@ -314,7 +314,6 @@ body {
 }
 
 #projects .container h3 {
-    font-size:var(--fs-lg);
     color:var(--clr-tundora);
 }
 
@@ -323,13 +322,15 @@ body {
 }
 
 #projects .container .badges {
-    padding:.5rem 0 2rem 0;
+    padding:.5rem 0 var(--spacing-md) 0;
     display: flex;
+    flex-wrap: wrap;
     gap:0.5rem;
 }
 
 #projects .container .badge {
-    background-color: rgb(229,229,229);
+    display: inline-block;
+    background-color: rgb(219,219,219);
     padding:0.25rem 1rem;
     border-radius: 8px;
     line-height: 140%;
@@ -337,8 +338,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#projects .content .container img {
-    max-width: 400px;
+#projects .container img {
+    width: 400px;
 }
 
 #projects .info {
@@ -350,6 +351,9 @@ body {
 @media (max-width:900px) {
     #projects .container {
         flex-direction: column;
-        align-items: flex-start;
     };
+    #projects .container img {
+        width: 100%;
+        max-width: none;
+    }
 }
