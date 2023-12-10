@@ -12,11 +12,80 @@ body {
     padding:var(--spacing-md) var(--spacing-xl) 0 var(--spacing-xl);
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 #header .dynamic-text::after {
     content:'Bienvenue';
     animation: text-changing 20s infinite;
+}
+
+#header .nav .nav-items {
+    list-style:none;
+    display: flex;
+    align-items: center;
+}
+
+#header .nav .nav-items li:first-child {
+    padding: 0 1rem;
+}
+
+#header .nav .nav-items .nav-item:nth-child(2) {
+    margin-left: 1rem;
+}
+
+#header .nav .nav-items .nav-item {
+    padding-right:1rem;
+}
+
+#header .nav .nav-items .nav-link {
+    font-weight: 400;
+}
+
+#header .logo {
+    line-height: 96%;
+    vertical-align: bottom;
+}
+
+#header .menu-wrapper {
+    display: none;
+    top:3rem;
+    padding:1rem 0;
+    position: absolute;
+    transition-property: left;
+    transition-duration: 200ms;
+    z-index: 999;
+}
+
+#header .menu {
+    display: flex;
+    max-width: 450px;
+}
+
+#header .menu .aside {
+    padding: 1rem;
+    background: #146ef5;
+    box-shadow: 0px 25px 125px 0px rgba(20,110,245,0.8)
+}
+
+#header .menu .content {
+    display: flex;
+    gap:1rem;
+    flex-direction: column;
+    padding: 1rem;
+    min-width: 350px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+}
+
+#header .menu ul {
+    list-style-type: none;
+}
+
+@media (max-width:720px) {
+    #header .dynamic-text {
+        display: none;
+    }
 }
 
 @keyframes text-changing {
