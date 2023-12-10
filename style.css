@@ -283,9 +283,15 @@ body {
 =============== */
 
 #projects {
-    background: var(--clr-white);
+    background: rgb(239,239,239);
     padding:2rem var(--spacing-xl);
     color:var(--clr-black);
+}
+
+#projects .content {
+    display: flex;
+    flex-direction: column;
+    gap:var(--spacing-sm);
 }
 
 #projects .decoration {
@@ -298,13 +304,12 @@ body {
     white-space: nowrap;
     overflow: none;
     font-size: var(--fs-xl);
-    color:rgb(229,229,229);
+    color:rgb(219,219,219);
 }
 
-#projects .title {
+#projects .subtitle {
     padding-top:1rem;
     color:var(--clr-tundora);
-    font-size:var(--fs-lg)
 }
 
 #projects .container {
