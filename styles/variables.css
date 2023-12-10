@@ -2,6 +2,7 @@
 :root {
     --fs-xl:4rem;
     --fs-lg:3.25rem;
+    --fs-md-3x:2.75rem;
     --fs-md:2rem;
     --fs-sm:1.4rem;
     --fs-xsm:1rem;
@@ -23,6 +24,7 @@
         --fs-xxl:3.25rem;
         --fs-xl:2.5rem;
         --fs-lg:2rem;
+        --fs-md-3x:2rem;
         --fs-md:1.5rem;
         --fs-sm:1.125rem;
 
