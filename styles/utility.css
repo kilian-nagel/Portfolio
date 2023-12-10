@@ -1,0 +1,90 @@
+
+/* Texts
+=============== */
+
+.label {
+
+}
+
+.text {
+    line-height: 140%;
+    color:var(--clr-alto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-2x {
+
+}
+
+.text-3x {
+    font-weight: 700;
+    font-size: var(--fs-md-3x);
+}
+
+.subtitle {
+    font-weight: 900;
+    font-size:var(--fs-lg);
+}
+
+.subtitle-2x {
+
+}
+
+.subtitle-3x {
+
+}
+
+.title {
+    font-weight: 900;
+    font-size:var(--fs-xl);
+}
+
+.title-2x {
+
+}
+
+.title-3x {
+
+}
+
+.text-dark {
+    line-height: 140%;
+    color:var(--clr-cod-gray);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Buttons
+========== */
+
+.btn-group {
+    padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.primary-btn {
+    background-color: rgb(237, 237, 237);
+    color:black;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 12px;
+}
+
+.secondary-btn {
+    background-color: rgb(10,10,10);
+    border: solid 1px rgb(30,30,30);
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 12px;
+}
+
+/* Boldness 
+========== */
+
+.bold-400 {font-weight: 400;}
+.bold-500 {font-weight: 500;}
+.bold-600 {font-weight: 600;}
+.bold-700 {font-weight: 700;}
+.bold-800 {font-weight: 800;}
+.bold-900 {font-weight: 900;}
