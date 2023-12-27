@@ -5,3 +5,9 @@ a , button {
     text-decoration: none;
     color:white;
 }
+
+u {    
+    border-bottom: 1px dotted white;
+    color:var(--clr-alto);
+    text-decoration: none;
+}
