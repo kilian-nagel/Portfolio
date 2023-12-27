@@ -1,0 +1,68 @@
+
+body {
+    background-color: black;
+    color:white;
+    font-family: 'Inter', sans-serif;
+    background: var(--clr-black);
+    color:var(--clr-white);
+}
+
+main {
+    padding:var(--spacing-xxl) var(--spacing-xl);
+}
+
+/* Header
+=============== */
+
+#presentation {
+    display: flex;
+    gap:var(--spacing-lg);
+}
+
+#presentation .text {
+    margin-bottom: var(--spacing-md);
+}
+
+#presentation .badges {
+    padding:.5rem 0 var(--spacing-md) 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap:0.5rem;
+}
+
+#presentation .badge {
+    display: inline-block;
+    background-color: rgba(255,255,255,.1);
+    color:white;
+    padding:0.25rem 1rem;
+    border-radius: 8px;
+}
+
+#presentation .info {
+    display: flex;
+    flex-direction: column;
+    gap:var(--spacing-md)
+}
+
+/*  Contexte
+=============== */
+
+#contexte {
+    display: flex;
+    margin-top: var(--spacing-xxl);
+    gap:var(--spacing-xxl);
+}
+
+#contexte aside {
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#contexte .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+
