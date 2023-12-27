@@ -2,55 +2,78 @@
 /* Texts
 =============== */
 
-.label {
-
-}
-
 .text {
     line-height: 140%;
     color:var(--clr-alto);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.text-2x {
-
-}
-
-.text-3x {
-    font-weight: 700;
-    font-size: var(--fs-md-3x);
-}
-
-.subtitle {
-    font-weight: 900;
-    font-size:var(--fs-lg);
-}
-
-.subtitle-2x {
-
-}
-
-.subtitle-3x {
-
-}
-
-.title {
-    font-weight: 900;
-    font-size:var(--fs-xl);
-}
-
-.title-2x {
-
-}
-
-.title-3x {
-
-}
-
 .text-dark {
     line-height: 140%;
     color:var(--clr-cod-gray);
     font-family: Arial, Helvetica, sans-serif;
+}   
+
+/* Flex
+=============== */
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-align-center {
+    justify-content: center;
+}
+
+.gap-1 {
+    gap: 0.5rem;
+}
+
+.gap-2 {
+    gap: .75rem;
+}
+
+/* Font size 
+=============== */
+
+.fs-0 {
+    font-size: var(--fs-000);
+}
+
+.fs-100 {
+    font-size: var(--fs-100);
+}
+.fs-200 {
+    font-size: var(--fs-200);
+}
+.fs-300 {
+    font-size: var(--fs-300);
+}
+.fs-400 {
+    font-size: var(--fs-400);
+}
+.fs-500 {
+    font-size: var(--fs-500);
+}
+.fs-600 {
+    font-size: var(--fs-600);
+}
+.fs-700 {
+    font-size: var(--fs-700);
+}
+.fs-800 {
+    font-size: var(--fs-800);
+}
+.fs-900 {
+    font-size: var(--fs-900);
 }
 
 /* Buttons
@@ -88,3 +111,33 @@
 .bold-700 {font-weight: 700;}
 .bold-800 {font-weight: 800;}
 .bold-900 {font-weight: 900;}
+
+/* Tooltips 
+=============== */
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip::before {
+    content: attr(data-title); /* Empty content */
+    display: none; /* Initially hide the before content */
+    /* Your styles for the before content */
+    left: 50%;
+    text-align: center;
+    transform:translate(-50%,-100%);
+    font-size: 14px;
+    line-height: normal;
+    min-width: 140px;
+    white-space: wrap;
+    background-color: rgba(0,0,0,0.05);
+    backdrop-filter: blur(16px);
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+  
+.tooltip:hover::before {
+    position: absolute;
+    display: inline;
+}
