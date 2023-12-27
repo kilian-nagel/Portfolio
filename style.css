@@ -10,7 +10,7 @@ body {
 
 #home {
     margin-top:var(--spacing-xxl);
-    padding:var(--spacing-xxl) var(--spacing-xl) 0 var(--spacing-xl);
+    padding:0 var(--spacing-xl) var(--spacing-xxl) var(--spacing-xl);
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -18,41 +18,72 @@ body {
     gap:var(--spacing-lg);
 }
 
-#home h1 {
-    font-size:var(--fs-xl);
-    background: linear-gradient(180deg,#fff,hsla(0,0%,100%,.75));
-    background-clip: initial;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+#home .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home .content .left {
+    padding-top:var(--spacing-xxl);
+}
+
+#home .content .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#home .content .right .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-self: flex-start;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+#home .link {
+    color: white;
+    border-bottom: solid 2px lightgray;
+}
+
+#home .link:hover {
+    cursor: pointer;
+}
+
+#home .content .right .container .block {
+    color:rgba(255,255,255,0.1);
+}
+
+#home .desc-part {
     padding-bottom: 1rem;
 }
 
+#home h1 {
+    padding-bottom: 1rem;
+}
+
+#home .title .role {
+    background: linear-gradient(90deg, rgb(0, 124, 240), rgb(0, 223, 216));
+    background-clip: initial;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
 #home .text {
-    font-size:var(--fs-sm);
-    line-height: 140%;
-    color:var(--clr-alto);
     max-width: 720px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#home .menu .link {
-    display: flex;
-    min-width: 150px;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-#home .menu .link p {
-    font-size: 0.8rem;
-    text-transform: uppercase;
 }
 
 #home .primary-btn {
-    background: linear-gradient(180deg,#fff,hsla(0,0%,100%,.75));
+    background: linear-gradient(180deg,#fff,hsla(0, 0%, 64%, 0.75));
 }
 
-#home .menu .link span {
-    font-size: .8rem;
+@media screen and (max-width:1400px){
+    #home .content .right {
+        display: none;
+    }
 }
 
 @media screen and (max-width:800px){
@@ -61,41 +92,93 @@ body {
     }
 }
 
-/* Primary Nav
-============== */
+/* Hero 
+=============== */
 
-#primary-nav {
-    margin-top:var(--spacing-xxl);
-    padding:0 var(--spacing-xl);
+#hero {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./media/home.jpg") center center/cover;
+    height: 600px;
     position: relative;
 }
 
-#primary-nav .list {
-    list-style-type: none;
-    position: relative;
+#hero .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:var(--spacing-lg) var(--spacing-xl) var(--spacing-lg) var(--spacing-xl);
+    height: 100%;
 }
 
-#primary-nav .list .link {
-    font-size:var(--fs-md);
-    position: relative;
-}
-
-#primary-nav .deco {
+#hero .overlay {
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
     position: absolute;
-    display: none;
-    left:20px;
-    color:var(--clr-cod-gray);
-    font-size:var(--fs-xl);
+    top:0;
+    z-index:-1;
+    height: 100%;
+    width: 100%;
 }
+
+/* Biographie
+=============== */
+
+#biographie {
+    padding:0 var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+    position: relative;
+}
+
+#biographie .decoration {
+    overflow: hidden;
+    display: flex;
+}
+
+#biographie .title {
+    padding-bottom: var(--spacing-md);
+}
+
+#biographie .text {
+    max-width: 640px;
+}
+
+#biographie .content {
+    display: flex;
+    gap:var(--spacing-md);
+}
+
+#biographie .content .column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    flex:1;
+}
+
+#biographie .title-decoration {
+    white-space: nowrap;
+    overflow: none;
+    padding-top:2rem;
+    color:rgba(255,255,255,0.05);
+    animation: scrollText 15s linear infinite;
+    transition: none;
+}
+
+@media (max-width:1160px) {
+    #biographie .content {
+        flex-direction: column;
+    }
+
+    #biographie .text {
+        max-width: 760px;
+    }
+}
+
 
 /* Skills 
 =============== */
 
 #skills {
     padding:0 var(--spacing-xl);
-    margin-top:var(--spacing-xxl);
     padding-bottom: var(--spacing-md);
-    background: var(--clr-cod-gray);
+    background: black;
 }
 
 #skills .decoration {
@@ -107,7 +190,6 @@ body {
     white-space: nowrap;
     overflow: none;
     padding-top:2rem;
-    font-size: var(--fs-xl);
     color:rgba(255,255,255,0.05);
     animation: scrollText 15s linear infinite;
     transition: none;
@@ -116,10 +198,6 @@ body {
 #skills > .subtitle {
     padding-top:1rem;
     margin-bottom:2rem;
-    background: linear-gradient(180deg,#fff,hsla(0,0%,100%,.75));
-    background-clip: initial;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
 }
 
 #skills > .abilities {
@@ -129,7 +207,6 @@ body {
 }
 
 #skills h3 {
-    font-size: var(--fs-md);
     margin-bottom: 1rem;
 }
 
@@ -194,7 +271,6 @@ body {
     animation: scrollText 15s linear infinite;
     white-space: nowrap;
     overflow: none;
-    font-size: var(--fs-xl);
     color:rgb(219,219,219);
 }
 
@@ -229,9 +305,6 @@ body {
     background-color: rgb(219,219,219);
     padding:0.25rem 1rem;
     border-radius: 8px;
-    line-height: 140%;
-    color:var(--clr-cod-gray);
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 #projects .container img {
@@ -242,6 +315,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.circle-follow-cursor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+    width: 120px;
+    height:120px;
 }
 
 @media (max-width:900px) {
