@@ -97,7 +97,6 @@ body {
 
 #hero {
     background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./media/home.jpg") center center/cover;
-    height: 600px;
     position: relative;
 }
 
@@ -260,18 +259,6 @@ body {
     display: flex;
     flex-direction: column;
     gap:var(--spacing-sm);
-}
-
-#projects .decoration {
-    overflow: hidden;
-    display: flex;
-}
-
-#projects .title-decoration {
-    animation: scrollText 15s linear infinite;
-    white-space: nowrap;
-    overflow: none;
-    color:rgb(219,219,219);
 }
 
 #projects .subtitle {
