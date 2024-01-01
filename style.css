@@ -117,6 +117,12 @@ body {
     width: 100%;
 }
 
+@media screen and (max-width:720px){
+    #hero .content span {
+        display: none;
+    }
+}
+
 /* Biographie
 =============== */
 
