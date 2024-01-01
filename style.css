@@ -240,9 +240,22 @@ body {
     100%{transform: translateX(-1190px);}
 }
 
-@media (max-width:900px) {
-    #skills .abilities{
+@media (max-width:516px) {
+    #skills > .abilities {
+        flex-wrap: nowrap;
         flex-direction: column;
+    }
+    #skills .abilities .container { 
+        min-width: 250px;
+    }
+    #skills .abilities .container { 
+        padding:1rem;
+    }
+    #skills .abilities .container .header {
+        gap:0.5rem;
+    }
+    #skills header {
+        margin-bottom: 0.5rem;
     }
 }
 
