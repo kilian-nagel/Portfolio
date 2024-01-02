@@ -17,6 +17,8 @@ function initListeners(){
     (elements).forEach(element => {
         element.addEventListener("mouseover",()=>{
             const content = menuContent[element.querySelector("a.nav-link").id];
+            if(content===undefined || content==="" || content===null) return;
+
             subMenuWrapper.innerHTML = content;
             menu.style.display = "block";
             const left = element.getBoundingClientRect().left;
