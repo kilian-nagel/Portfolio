@@ -96,7 +96,7 @@ body {
 =============== */
 
 #hero {
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./media/home.jpg") center center/cover;
+    background-color: rgb(10,10,10);
     position: relative;
 }
 
