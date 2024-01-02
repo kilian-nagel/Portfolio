@@ -372,9 +372,60 @@ body {
 @media (max-width:900px) {
     #projects .container {
         flex-direction: column;
-    };
+    }
     #projects .container img {
         width: 100%;
         max-width: none;
+    }
+}
+
+/* Technologies 
+=============== */
+
+#technologies {
+    padding:0 var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+}
+
+#technologies .content h2 {
+    padding-bottom: 1.5rem;
+}
+
+#technologies .content .badges {
+    padding:.5rem 0 var(--spacing-md) 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap:0.5rem;
+}
+
+#technologies .content .badge {
+    display: inline-block;
+    background-color: rgb(10,10,10);
+    padding:0.25rem 1rem;
+    border-radius: 8px;
+}
+
+/* Parcours 
+=============== */
+
+#parcours {
+    padding:0 var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+}
+
+#parcours .content .container {
+    padding: 1rem 0;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    gap:2rem;
+}
+
+@media screen and (max-width:720px){
+    #parcours .content .container {
+        justify-content: start;
+        align-items: start;
+        gap:1rem;
+        flex-direction: column;
     }
 }
