@@ -240,8 +240,12 @@ body {
 }
 
 #skills .abilities .container:hover {
-    background-color: #203E57;
-    border-color: black;
+    background-color: rgba(20,110,245,.95);
+    box-shadow:0px 0px 200px 0px rgba(20,110,245,.25);
+}
+
+#skills .abilities .container:hover p {
+    color:white;
 }
 
 #skills .abilities .container:hover .deco {
