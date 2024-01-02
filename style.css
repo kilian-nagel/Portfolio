@@ -309,9 +309,7 @@ body {
 =============== */
 
 #projects {
-    background: rgb(239,239,239);
     padding:2rem var(--spacing-xl);
-    color:var(--clr-black);
 }
 
 #projects .content {
@@ -322,17 +320,12 @@ body {
 
 #projects .subtitle {
     padding-top:1rem;
-    color:var(--clr-tundora);
 }
 
 #projects .container {
     display: flex;
     gap:var(--spacing-md);
     padding-top:var(--spacing-md);
-}
-
-#projects .container h3 {
-    color:var(--clr-tundora);
 }
 
 #projects .container p {
@@ -348,7 +341,7 @@ body {
 
 #projects .container .badge {
     display: inline-block;
-    background-color: rgb(219,219,219);
+    background-color: rgb(10,10,10);
     padding:0.25rem 1rem;
     border-radius: 8px;
 }
