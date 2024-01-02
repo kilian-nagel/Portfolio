@@ -220,7 +220,7 @@ body {
     width: 100%;
     padding: 1.5rem;
     flex:1;
-    border: solid 2px rgb(20,20,20);
+    background: rgb(10,10,10);
     transition: background-color 250ms ease;
     position: relative;
 }
