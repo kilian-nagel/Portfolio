@@ -8,7 +8,6 @@ body {
 }
 
 main {
-    padding:var(--spacing-xxl) var(--spacing-xl);
 }
 
 /* Header
@@ -17,6 +16,7 @@ main {
 #presentation {
     display: flex;
     gap:var(--spacing-lg);
+    padding:var(--spacing-xxl) var(--spacing-xl) 4rem var(--spacing-xl);
 }
 
 #presentation .text {
@@ -49,6 +49,7 @@ main {
 
 #contexte {
     display: flex;
+        padding:var(--spacing-xxl) var(--spacing-xl);
     margin-top: var(--spacing-xxl);
     gap:var(--spacing-xxl);
 }
