@@ -22,7 +22,7 @@ function initListeners(){
             subMenuWrapper.innerHTML = content;
             menu.style.display = "block";
             const left = element.getBoundingClientRect().left;
-            menu.style.left = left+"px"; 
+            menu.style.left = left-getDocumentWidthMinusNavbarWidth()/2+"px"; 
         })
         element.addEventListener("mouseout",()=>{
             menu.style.display = "none";
