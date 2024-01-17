@@ -75,7 +75,7 @@ body {
     max-width: 1500px;
     margin: 0 auto;
     gap:4rem;
-        padding:var(--spacing-xxl) var(--spacing-xl);
+    padding:var(--spacing-xxl) var(--spacing-xl);
 }
 
 #sections #aside {
