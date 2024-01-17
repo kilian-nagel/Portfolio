@@ -13,6 +13,8 @@ body {
 #presentation {
     display: flex;
     gap:var(--spacing-lg);
+    max-width: 1500px;
+    margin: 0 auto;
     padding:var(--spacing-xxl) var(--spacing-xl) 4rem var(--spacing-xl);
 }
 
@@ -46,6 +48,8 @@ body {
 
 #contexte {
     display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
         padding:var(--spacing-xxl) var(--spacing-xl);
     margin-top: var(--spacing-xxl);
     gap:var(--spacing-xxl);
