@@ -1,6 +1,4 @@
 
-const l = console.log;
-
 function initListeners(){
     const menu = document.querySelector("#header .menu-wrapper");
     const subMenuWrapper = document.querySelector("#header .menu-wrapper");
@@ -16,13 +14,11 @@ function initListeners(){
 
     (elements).forEach(element => {
         element.addEventListener("mouseover",()=>{
-            const content = menuContent[element.querySelector("a.nav-link").id];
-            if(content===undefined || content==="" || content===null) return;
+            const success = setupContent(subMenuWrapper,getSubmenuContent(element.querySelector("a.nav-link").id));
+            if(!success) return;
 
-            subMenuWrapper.innerHTML = content;
             menu.style.display = "block";
-            const left = element.getBoundingClientRect().left;
-            menu.style.left = left-getDocumentWidthMinusNavbarWidth()/2+"px"; 
+            setLeftOffset(menu,getLeftOffsetLeft(element));
         })
         element.addEventListener("mouseout",()=>{
             menu.style.display = "none";
@@ -30,13 +26,39 @@ function initListeners(){
     });
 }
 
+/* Content 
+=============== */
+
+function getSubmenuContent(contentId){
+    return menuContent[contentId];
+}
+
+function setupContent(element,content){
+    if(content===undefined || content==="" || content===null) return false;
+    element.innerHTML = content;
+    return true;
+}
+
+/* Offset
+=============== */
+
+function setLeftOffset(element,offset){
+    element.style.left = offset+"px";
+}
+
+function getLeftOffsetLeft(element){
+    return element.getBoundingClientRect().left - getDocumentWidthMinusNavbarWidth()/2;
+}
+
+/* Méthodes pour obtenir les tailles 
+=============== */
+
 function getDocumentWidthMinusNavbarWidth(){
     return getElementWidth("body")-getElementWidth("#header");
 }
 
 function getElementWidth(query){
     const el = document.querySelector(query);
-    console.log(el.offsetWidth);
     return el.offsetWidth;
 }
 
