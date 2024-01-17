@@ -79,12 +79,23 @@ body {
 }
 
 #sections #aside {
-    background-color: rgba(255,255,255,.1);
-    border-radius: 8px;
-    padding: var(--spacing-sm);
     min-width: 300px;
     position: sticky;
     top:3rem;
+}
+
+#sections #aside .content {
+    background-color: rgba(255,255,255,.1);
+    border-radius: 8px;
+    padding: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+#sections > .content {
+    display: flex;
+    flex-direction: column;
+    gap:var(--spacing-md);
 }
 
 #sections #aside p {
@@ -95,10 +106,9 @@ body {
     gap:1rem
 }
 
-#sections .content {
-    display: flex;
-    flex-direction: column;
-    gap:var(--spacing-lg);
+#top-link {
+    display: block;
+    padding: var(--spacing-sm2) var(--spacing-sm);
 }
 
 #sections h2 {
