@@ -1,0 +1,30 @@
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--clr-black);
+    color:var(--clr-white);
+}
+
+main {
+    padding:var(--spacing-xxl) var(--spacing-xl) 4rem var(--spacing-xl);
+}
+
+p {
+    max-width: 900px;
+}
+
+h2 {
+    padding-bottom: .5rem;
+}
+
+.goals {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    gap:1.5rem;
+}
+
+.goals h3 {
+    padding-bottom: .25rem;
+}
