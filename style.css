@@ -66,15 +66,19 @@ body {
     padding-bottom: 1rem;
 }
 
-#home .title .role {
-    background: linear-gradient(90deg, rgb(0, 124, 240), rgb(0, 223, 216));
-    background-clip: initial;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-
 #home .text {
     max-width: 720px;
+}
+
+#home .actions .container {
+    border-radius:8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:.75rem;
+    padding:1.5rem;
+    border:solid 2px rgb(10,10,10);
 }
 
 .gradient-circle {
