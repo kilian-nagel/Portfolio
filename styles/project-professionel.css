@@ -8,6 +8,8 @@ body {
 
 main {
     padding:var(--spacing-xxl) var(--spacing-xl) 4rem var(--spacing-xl);
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 p {
