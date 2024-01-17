@@ -201,8 +201,8 @@ body {
 }
 
 #skills > .subtitle {
-    padding-top:1rem;
-    margin-bottom:2rem;
+    padding-top:4rem;
+    margin-bottom:1rem;
 }
 
 #skills > .abilities {
@@ -319,7 +319,7 @@ body {
 }
 
 #projects .subtitle {
-    padding-top:1rem;
+    padding-top:4rem;
 }
 
 #projects .container {
@@ -389,6 +389,7 @@ body {
 
 #technologies .content h2 {
     padding-bottom: 1.5rem;
+    padding-top: 4rem;
 }
 
 #technologies .content .badges {
@@ -411,6 +412,10 @@ body {
 #parcours {
     padding:0 var(--spacing-xl);
     padding-bottom: var(--spacing-md);
+}
+
+#parcours h2 {
+    margin-top: 4rem;
 }
 
 #parcours .content .container {
