@@ -30,4 +30,14 @@ function initListeners(){
     });
 }
 
+function getDocumentWidthMinusNavbarWidth(){
+    return getElementWidth("body")-getElementWidth("#header");
+}
+
+function getElementWidth(query){
+    const el = document.querySelector(query);
+    console.log(el.offsetWidth);
+    return el.offsetWidth;
+}
+
 initListeners();
