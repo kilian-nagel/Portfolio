@@ -69,25 +69,64 @@ body {
 /* Sections
 =============== */
 
-#contexte {
+#sections {
     display: flex;
+    align-items: flex-start;
     max-width: 1500px;
     margin: 0 auto;
+    gap:4rem;
         padding:var(--spacing-xxl) var(--spacing-xl);
-    margin-top: var(--spacing-xxl);
-    gap:var(--spacing-xxl);
 }
 
-#contexte aside {
-    flex-basis: 400px;
-    flex-grow: 0;
-    flex-shrink: 0;
+#sections #aside {
+    background-color: rgba(255,255,255,.1);
+    border-radius: 8px;
+    padding: var(--spacing-sm);
+    min-width: 300px;
+    position: sticky;
+    top:3rem;
 }
 
-#contexte .content {
+#sections #aside p {
+    padding-bottom: 1rem;
+}
+
+#sections #aside li {
+    gap:1rem
+}
+
+#sections .content {
+    display: flex;
+    flex-direction: column;
+    gap:var(--spacing-lg);
+}
+
+#sections h2 {
+    padding-bottom:var(--spacing-sm);
+}
+
+#sections h3 {
+    color:gray;
+    font-size: var(--fs-300);
+    padding-bottom: var(--spacing-sm3);
+}
+
+/*  Contexte
+=============== */
+
+#context .content {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
 }
+
+/* Apprentissages 
+=============== */
+
+#skills .content {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
