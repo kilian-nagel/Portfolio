@@ -21,26 +21,27 @@ body {
 #home .content {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-}
-
-#home .content .left {
     padding-top:var(--spacing-xxl);
+
+    justify-content: space-between;
 }
 
 #home .content .right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
+    justify-content: center;
+    gap:3rem
+}
+
+#home .content .right {
+    text-align: center;
 }
 
 #home .content .right .container {
+    min-width: 200px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    align-self: flex-start;
-    align-items: flex-end;
+    gap: .5rem;
     justify-content: end;
 }
 
