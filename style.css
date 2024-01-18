@@ -240,10 +240,20 @@ body {
     width: 100%;
     padding: 1.5rem;
     flex:1;
-    background: rgb(10,10,10);
+    border-radius: 8px;
+    background: rgb(20,20,20);
     transition: background-color 250ms ease;
     position: relative;
 }
+
+#skills .abilities .container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:2.5rem;
+}
+
+
 
 #skills .abilities .deco {
     opacity: 1;
@@ -259,11 +269,6 @@ body {
     transition: right 2s ease;
 }
 
-#skills .abilities .container:hover {
-    background-color: rgba(20,110,245,.95);
-    box-shadow:0px 0px 200px 0px rgba(20,110,245,.25);
-}
-
 #skills .abilities .container:hover p {
     color:white;
 }
@@ -276,7 +281,37 @@ body {
 #skills .abilities .container  .header {
     display: flex;
     gap: 1rem;
-    align-items: center;
+    flex-direction: column;
+}
+
+#skills .abilities:nth-of-type(1) .container:nth-child(1){
+    background-color: #ffbc01;
+}
+
+#skills .abilities:nth-of-type(1) .container:nth-child(2){
+    background-color: white;
+}
+
+#skills .abilities:nth-of-type(1) .container:nth-child(3){
+    background-color: rgba(20,110,245,.95);
+}
+
+#skills .abilities:nth-of-type(2) .container:nth-child(1){
+    background-color: #ED6A5A;
+}
+
+#skills .abilities:nth-of-type(2) .container:nth-child(2){
+    background-color: #9FD356;
+}
+
+#skills .abilities:nth-of-type(2) .container:nth-child(3){
+    background-color: #B0A990;
+
+}
+
+#skills .abilities .container .header img {
+    width: 40px;
+    height: 40px;
 }
 
 #skills .abilities .container .content .text {
