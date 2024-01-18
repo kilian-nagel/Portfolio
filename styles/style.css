@@ -87,7 +87,7 @@ main {
     align-items: flex-start;
     gap:.75rem;
     padding:1.5rem;
-    border:solid 2px rgb(10,10,10);
+    border:solid 2px rgb(20,20,20);
 }
 
 .gradient-circle {
