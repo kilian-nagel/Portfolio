@@ -11,13 +11,16 @@ body {
     overflow-x:hidden;
 }
 
+main {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
 /* Home
 =============== */
 
 #home {
     padding:var(--spacing-xxl) var(--spacing-xl) var(--spacing-xxl) var(--spacing-xl);
-    max-width: 1500px;
-    margin: 0 auto;
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -125,8 +128,6 @@ body {
     flex-direction: column;
     padding:var(--spacing-lg) var(--spacing-xl) var(--spacing-lg) var(--spacing-xl);
     height: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
 }
 
 #hero .overlay {
@@ -150,8 +151,6 @@ body {
 #biographie {
     padding:0 var(--spacing-xl);
     padding-bottom: var(--spacing-md);
-    max-width: 1500px;
-    margin: 0 auto;
     position: relative;
 }
 
@@ -207,8 +206,6 @@ body {
 #skills {
     padding:0 var(--spacing-xl);
     padding-bottom: var(--spacing-md);
-    max-width: 1500px;
-    margin: 0 auto;
     background: black;
 }
 
@@ -371,8 +368,6 @@ body {
 
 #projects {
     padding:2rem var(--spacing-xl);
-    max-width: 1500px;
-    margin: 0 auto;
 }
 
 #projects .content {
@@ -448,8 +443,6 @@ body {
 #technologies {
     padding:0 var(--spacing-xl);
     padding-bottom: var(--spacing-md);
-    max-width: 1500px;
-    margin: 0 auto;
 }
 
 #technologies .content h2 {
@@ -477,8 +470,6 @@ body {
 #parcours {
     padding:0 var(--spacing-xl);
     padding-bottom: var(--spacing-md);
-    max-width: 1500px;
-    margin: 0 auto;
 }
 
 #parcours h2 {
