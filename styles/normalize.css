@@ -2,7 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding:0;
-    color:rgb(237, 237, 237);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--clr-black);
+    color:var(--clr-white);
 }
 
 a:hover {
