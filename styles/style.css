@@ -55,14 +55,6 @@ main {
     justify-content: end;
 }
 
-#home .link {
-    color: white;
-}
-
-#home .link:hover {
-    cursor: pointer;
-}
-
 #home .content .right .container .block {
     color:rgba(255,255,255,0.1);
 }
