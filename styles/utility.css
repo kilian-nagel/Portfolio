@@ -102,6 +102,13 @@
     border-radius: 12px;
 }
 
+/* Links 
+================ */
+
+.link {
+    border-bottom: 2px solid white;
+}
+
 /* Boldness 
 ========== */
 
