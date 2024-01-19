@@ -1,4 +1,6 @@
 
+@import "mixins.scss";
+
 main {
     padding:var(--spacing-xxl) var(--spacing-xl) 4rem var(--spacing-xl);
     max-width: 1500px;
@@ -21,7 +23,5 @@ h2 {
 }
 
 .goals h3 {
-    font-weight: 700;
-    color:var(--text-secondary);
-    padding-bottom: .25rem;
+    @include subtitle;
 }
