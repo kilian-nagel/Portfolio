@@ -323,7 +323,6 @@ main {
 
 #skills .abilities .container .list {
     display: flex;
-    list-style-type: none;
     flex-wrap: wrap;
     gap:0.5rem;
 }

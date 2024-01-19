@@ -79,10 +79,6 @@
   cursor: pointer;
 }
 
-#header .menu ul {
-  list-style-type: none;
-}
-
 @media (max-width: 720px) {
   #header .dynamic-text {
     display: none;

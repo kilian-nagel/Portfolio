@@ -11,3 +11,7 @@ u {
     color:var(--clr-alto);
     text-decoration: none;
 }
+
+ul {
+    list-style: none;
+}
