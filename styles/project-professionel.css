@@ -21,6 +21,7 @@ h2 {
 }
 
 .goals h3 {
-    color:gray;
+    font-weight: 700;
+    color:var(--text-secondary);
     padding-bottom: .25rem;
 }
