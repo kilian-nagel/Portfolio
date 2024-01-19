@@ -114,15 +114,18 @@
 } 
 
 @media (max-width: 920px) {
-    #header .nav .nav-items {
-        display: none;
-    }
+    #header {
+        #toggleMenu {
+            display: block;
+        }
 
-    #header .nav .mail {
-        display: none;
-    }
-
-    #header #toggleMenu {
-        display: block;
+        .nav {
+            .mail {
+                display: none;
+            }
+            .nav-items {
+                display: none;
+            }
+        }
     }
 }
