@@ -32,7 +32,7 @@
     .submenu-wrapper {
         display: none;
         position: absolute;
-        top:3.25rem;
+        top: 3.25rem;
         padding: 1.5rem 0;
         transition: left 200ms;
         z-index: 999;
@@ -56,7 +56,7 @@
                 padding: 0.75rem;
                 border-radius: 8px;
             }
-        
+
             .container:hover {
                 background: rgba(255, 255, 255, 0.075);
                 cursor: pointer;
