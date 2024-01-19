@@ -1,7 +1,7 @@
 
 function initListeners(){
-    const menu = document.querySelector("#header .menu-wrapper");
-    const subMenuWrapper = document.querySelector("#header .menu-wrapper");
+    const menu = document.querySelector("#header .submenu-wrapper");
+    const subMenuWrapper = document.querySelector("#header .submenu-wrapper");
     const elements = document.querySelectorAll("#header .nav-item");
 
     menu.addEventListener("mouseover",()=>{
