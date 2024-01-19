@@ -242,10 +242,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap:2.5rem;
+    gap:.5rem;
 }
-
-
 
 #skills .abilities .deco {
     opacity: 1;
@@ -273,7 +271,15 @@ main {
 #skills .abilities .container  .header {
     display: flex;
     gap: 1rem;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex-direction: column;
+}
+
+
+#skills .abilities .container  .header .icone {
+    height: 10px;
+    width: 10px;
 }
 
 #skills .abilities:nth-of-type(1) .container:nth-child(1){
