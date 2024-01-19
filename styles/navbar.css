@@ -1,53 +1,36 @@
 #header {
   padding: var(--spacing-md) var(--spacing-xl) 0 var(--spacing-xl);
   display: flex;
-  max-width: 1500px;
-  margin: 0 auto;
   justify-content: space-between;
   position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
 }
-
 #header .nav {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 #header .nav .nav-items {
-  list-style: none;
   display: flex;
   align-items: center;
 }
-
-#header .mail {
-  border-bottom: solid 2px white;
-}
-
-#header .nav .nav-items .nav-item {
+#header .nav .nav-item {
   padding: 0.25rem 0.75rem;
 }
-
-#header .nav .nav-items .nav-link {
-  font-weight: 400;
-}
-
-#header .logo {
+#header .nav .logo {
   line-height: 103%;
-  padding-right: 1rem;
   vertical-align: bottom;
 }
-
-#header .menu-wrapper {
+#header .submenu-wrapper {
   display: none;
-  top: 3rem;
-  padding: 1.5rem 0;
   position: absolute;
-  transition-property: left;
-  transition-duration: 200ms;
+  top: 3.25rem;
+  padding: 1.5rem 0;
+  transition: left 200ms;
   z-index: 999;
 }
-
 #header .menu {
   display: flex;
   max-width: 450px;
@@ -62,12 +45,10 @@
   padding: 0.5rem;
   min-width: 350px;
 }
-
 #header .menu .content .container {
   padding: 0.75rem;
   border-radius: 8px;
 }
-
 #header .menu .content .container:hover {
   background: rgba(255, 255, 255, 0.075);
   cursor: pointer;
@@ -79,13 +60,12 @@
   }
 }
 /* Mobile menu 
-=============== */
+  =============== */
 #header #toggleMenu {
   display: none;
   color: white;
 }
-
-.fullscreen-menu {
+#header .fullscreen-menu {
   display: none;
   position: fixed;
   top: 50%;
@@ -95,10 +75,8 @@
   background-color: #fff;
   border-radius: 50%;
   z-index: 1000;
-  transition: width 0.5s ease-in-out, height 0.5s ease-in-out, top 0.5s ease-in-out, left 0.5s ease-in-out, border-radius 0.5s ease-in-out;
 }
-
-.menu-open {
+#header .menu-open {
   display: block;
   width: 100%;
   height: 100%;
@@ -106,13 +84,11 @@
   left: 0;
   border-radius: 0;
 }
-
 #header .circle-expand {
   border-radius: 50%;
   transform: scale(0);
   opacity: 0;
 }
-
 #header .menu-open {
   display: block;
   transform: scale(1);
@@ -128,13 +104,5 @@
   }
   #header #toggleMenu {
     display: block;
-  }
-}
-@keyframes scrollText {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-100%, 0);
   }
 }
