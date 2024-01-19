@@ -51,17 +51,11 @@
 #header .menu {
   display: flex;
   max-width: 450px;
-  border: solid 1px rgb(45, 45, 45);
-  background: rgba(0, 0, 0, 0.6);
+  border: solid 1px var(--border-primary);
+  background: var(--background-blur);
   backdrop-filter: blur(100px);
   border-radius: 12px;
 }
-
-#header .menu .aside {
-  padding: 1rem;
-  background: #146ef5;
-}
-
 #header .menu .content {
   display: flex;
   flex-direction: column;

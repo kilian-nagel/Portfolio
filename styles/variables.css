@@ -16,6 +16,8 @@
     --clr-black:#000000;
     --clr-cod-gray:#0d0d0d;
     --clr-tundora:#404040;
+    --background-blur:rgba(0,0,0,0.6);
+    --border-primary:rgb(45, 45, 45);
 
     --spacing-xxl:6rem;
     --spacing-xl:4rem;
