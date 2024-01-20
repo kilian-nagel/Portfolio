@@ -38,10 +38,6 @@
 /* Infos 
 =============== */
 
-#info {
-    background-color: rgba(20,110,245,.95);
-}
-
 #info .content {
     padding:var(--spacing-lg) var(--spacing-xl);display: flex;gap:2rem;max-width: 1500px;margin: 0 auto;
 }
