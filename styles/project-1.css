@@ -88,6 +88,7 @@
 }
 
 #sections #aside .content {
+    border:solid 2px var(--background-muted-light);
     background: var(--background-muted-light);
     border-radius: 8px;
     padding: var(--spacing-sm);
