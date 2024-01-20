@@ -103,37 +103,6 @@ main {
     }
 }
 
-/* Hero 
-=============== */
-
-#hero {
-    background-color: rgb(10,10,10);
-    position: relative;
-}
-
-#hero .content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding:var(--spacing-lg) var(--spacing-xl) var(--spacing-lg) var(--spacing-xl);
-    height: 100%;
-}
-
-#hero .overlay {
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
-    position: absolute;
-    top:0;
-    z-index:-1;
-    height: 100%;
-    width: 100%;
-}
-
-@media screen and (max-width:720px){
-    #hero .content span {
-        display: none;
-    }
-}
-
 /* Biographie
 =============== */
 
@@ -169,15 +138,6 @@ main {
     flex:1;
 }
 
-#biographie .title-decoration {
-    white-space: nowrap;
-    overflow: none;
-    padding-top:2rem;
-    color:rgba(255,255,255,0.05);
-    animation: scrollText 15s linear infinite;
-    transition: none;
-}
-
 @media (max-width:1160px) {
     #biographie .content {
         flex-direction: column;
@@ -195,21 +155,11 @@ main {
 #skills {
     padding:0 var(--spacing-xl);
     padding-bottom: var(--spacing-md);
-    background: black;
 }
 
 #skills .decoration {
     overflow: hidden;
     display: flex;
-}
-
-#skills .title-decoration {
-    white-space: nowrap;
-    overflow: none;
-    padding-top:2rem;
-    color:rgba(255,255,255,0.05);
-    animation: scrollText 15s linear infinite;
-    transition: none;
 }
 
 #skills > .subtitle {
@@ -243,29 +193,6 @@ main {
     flex-direction: column;
     justify-content: space-between;
     gap:.5rem;
-}
-
-#skills .abilities .deco {
-    opacity: 1;
-    display: none;
-    right:-20px;
-    position: absolute;
-    color: white;
-    font-weight:900;
-    font-size: 2rem;
-    z-index: 0;
-    bottom:-15px;
-    right: 16px;
-    transition: right 2s ease;
-}
-
-#skills .abilities .container:hover p {
-    color:white;
-}
-
-#skills .abilities .container:hover .deco {
-    right:8px;
-    display: block;
 }
 
 #skills .abilities .container  .header {
