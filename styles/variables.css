@@ -15,7 +15,8 @@
     --text-secondary:#898989;
     --background-primary:rgb(0,0,0);
     --background-secondary:rgb(255,255,255,255);
-    --background-muted:rgba(255,255,255,0.1);
+    --background-muted-light:rgba(255,255,255,0.1);
+    --background-muted-dark:rgb(15,15,15);
     --background-blur:rgba(0,0,0,0.6);
     --border-primary:rgb(45, 45, 45);
 
