@@ -2,13 +2,7 @@
 =============== */
 .text {
   line-height: 140%;
-  color: var(--clr-alto);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.text-dark {
-  line-height: 140%;
-  color: var(--clr-cod-gray);
+  color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
 }
 
