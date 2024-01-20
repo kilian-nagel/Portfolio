@@ -112,33 +112,3 @@
 .bold-700 {font-weight: 700;}
 .bold-800 {font-weight: 800;}
 .bold-900 {font-weight: 900;}
-
-/* Tooltips 
-=============== */
-
-.tooltip {
-    position: relative;
-}
-
-.tooltip::before {
-    content: attr(data-title); /* Empty content */
-    display: none; /* Initially hide the before content */
-    /* Your styles for the before content */
-    left: 50%;
-    text-align: center;
-    transform:translate(-50%,-100%);
-    font-size: 14px;
-    line-height: normal;
-    min-width: 140px;
-    white-space: wrap;
-    background-color: rgba(0,0,0,0.05);
-    backdrop-filter: blur(16px);
-    padding: 4px 12px;
-    border-radius: 12px;
-    margin-right: 10px;
-}
-  
-.tooltip:hover::before {
-    position: absolute;
-    display: inline;
-}
