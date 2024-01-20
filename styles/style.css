@@ -53,7 +53,7 @@ main {
 }
 
 #home .content .right .container .block {
-    color:rgba(255,255,255,0.1);
+    color:var(--background-muted);
 }
 
 #home .desc-part {
@@ -183,7 +183,7 @@ main {
     padding: 1.5rem;
     flex:1;
     border-radius: 8px;
-    background: rgb(20,20,20);
+    background: var(--background-muted);
     transition: background-color 250ms ease;
     position: relative;
 }
@@ -231,7 +231,6 @@ main {
 
 #skills .abilities:nth-of-type(2) .container:nth-child(3){
     background-color: #B0A990;
-
 }
 
 #skills .abilities .container .header img {
@@ -320,7 +319,7 @@ main {
 
 #projects .container .badge {
     display: inline-block;
-    background-color: rgb(10,10,10);
+    background-color: var(--background-muted-dark);
     padding:0.25rem 1rem;
     border-radius: 8px;
 }
@@ -380,7 +379,7 @@ main {
 
 #technologies .content .badge {
     display: inline-block;
-    background-color: rgb(10,10,10);
+    background-color: var(--background-muted-dark);
     padding:0.25rem 1rem;
     border-radius: 8px;
 }
