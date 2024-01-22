@@ -210,11 +210,11 @@ main {
 }
 
 #skills .abilities:nth-of-type(1) .container:nth-child(1){
-    background-color: #ffbc01;
+    background-color: #023e8a;
 }
 
 #skills .abilities:nth-of-type(1) .container:nth-child(2){
-    background-color: white;
+    background-color: #0077b6;
 }
 
 #skills .abilities:nth-of-type(1) .container:nth-child(3){
@@ -222,15 +222,15 @@ main {
 }
 
 #skills .abilities:nth-of-type(2) .container:nth-child(1){
-    background-color: #ED6A5A;
+    background-color: #0096c7;
 }
 
 #skills .abilities:nth-of-type(2) .container:nth-child(2){
-    background-color: #9FD356;
+    background-color: #00b4d8;
 }
 
 #skills .abilities:nth-of-type(2) .container:nth-child(3){
-    background-color: #B0A990;
+    background-color: #90e0ef;
 }
 
 #skills .abilities .container .header img {
