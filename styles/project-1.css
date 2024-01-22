@@ -10,10 +10,6 @@
     padding:var(--spacing-xxl) var(--spacing-xl) 4rem var(--spacing-xl);
 }
 
-#presentation .text {
-    margin-bottom: var(--spacing-md);
-}
-
 #presentation .badges {
     padding-top:.5rem;
     display: flex;
