@@ -27,6 +27,31 @@
             line-height: 103%;
             vertical-align: bottom;
         }
+
+        #fullscreenMenu {
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: var(--spacing-md) var(--spacing-xl) 0 var(--spacing-xl);
+            }
+            
+            .main {
+                padding: 0 var(--spacing-xl);
+
+                a {
+                    font-weight: 700;
+                    color:black
+                }
+
+                h3 {
+                    white-space: nowrap;
+                    color:rgba(215,215,215);
+                    font-size:6rem;
+                    padding: 1rem 0;
+                }
+            }
+        }
     }
 
     .submenu-wrapper {
