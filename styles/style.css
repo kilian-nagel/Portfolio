@@ -100,6 +100,9 @@ main {
     #home {
         flex-direction: column;
     }
+    #home h1 .deco {
+        display: none;
+    }
 }
 
 /* Biographie
