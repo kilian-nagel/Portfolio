@@ -29,7 +29,6 @@ main {
     width: 100%;
     display: flex;
     padding-top:var(--spacing-xxl);
-
     justify-content: space-between;
 }
 
@@ -292,18 +291,40 @@ main {
 
 #projects .content {
     display: flex;
-    flex-direction: column;
+    position: relative;
     gap:var(--spacing-sm);
+    overflow-y:hidden;
+    overflow-x:scroll;
+    padding-bottom: 2rem;
 }
 
-#projects .subtitle {
+#projects .header {
     padding-top:4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#projects .btn-group {
+    display: flex;
+    gap:1rem;
+}
+
+#projects .arrow-btn {
+    font-size:var(--fs-400);
+}
+
+#projects .arrow-btn:hover {
+    cursor: pointer;
 }
 
 #projects .container {
     display: flex;
-    gap:var(--spacing-md);
+    flex-direction: column;
+    flex-shrink: 0;
+    gap:1rem;
     padding-top:var(--spacing-md);
+    max-width: 400px;
 }
 
 #projects .container p {
@@ -311,7 +332,7 @@ main {
 }
 
 #projects .container .badges {
-    padding:.5rem 0 var(--spacing-md) 0;
+    padding:.5rem 0 1rem 0;
     display: flex;
     flex-wrap: wrap;
     gap:0.5rem;
@@ -325,13 +346,14 @@ main {
 }
 
 #projects .container img {
-    width: 400px;
+    width: 100%;
 }
 
 #projects .info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap:1rem;
 }
 
 .circle-follow-cursor {
@@ -349,11 +371,7 @@ main {
 
 @media (max-width:900px) {
     #projects .container {
-        flex-direction: column;
-    }
-    #projects .container img {
-        width: 100%;
-        max-width: none;
+        max-width: 325px;
     }
 }
 
