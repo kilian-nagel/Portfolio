@@ -55,13 +55,16 @@ function buildSubmenuContent(data){
 }
 
 function buildSubmenuContainer(data){
+    const linkWrapper = buildElement("a","");
+    linkWrapper.setAttribute('href',data.url);
     const container = buildElement("div",{"className":"container"});
     const title = buildElement("h3",{"className":"fs-0","text":data.title});
     const text = buildElement("p",{"className":"text fs-0","text":data.text});
 
     container.appendChild(title);
     container.appendChild(text);
-    return container;
+    linkWrapper.appendChild(container);
+    return linkWrapper;
 }
 
 function buildElement(elementType,data){
