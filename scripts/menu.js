@@ -30,12 +30,13 @@ function initListeners(){
 =============== */
 
 function getSubmenuContent(contentId){
-    return menuContent[contentId];
+    return buildSubmenuContent(menuContent[contentId]);
 }
 
-function setupContent(element,content){
-    if(content===undefined || content==="" || content===null) return false;
-    element.innerHTML = content;
+function setupContent(element,child){
+    if(child===undefined || child==="" || child===null) return false;
+    element.innerHTML = "";
+    element.appendChild(child);
     return true;
 }
 
