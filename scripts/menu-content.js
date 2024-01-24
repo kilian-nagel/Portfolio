@@ -7,10 +7,6 @@ const biographieData = [
         title:"Mon parcours",
         text:"Mon parcours scolaire"
     },
-    {
-        title:"Centres d'întérêts",
-        text:"Mes activités extrascolaires"
-    }
 ];
 
 const contactData = [
@@ -24,21 +20,9 @@ const contactData = [
     },
 ];
 
-const projectsData = [
-    {
-        title:"Scolaires",
-        text:"Projets scolaires"
-    },
-    {
-        title:"Personnels",
-        text:"Projets personnels"
-    },
-];
-
 const menuContent = {
     "lien-biographie":biographieData,
     "lien-contact":contactData,
-    "lien-projets":projectsData
 }
 
 function buildSubmenuContent(data){
