@@ -1,18 +1,24 @@
+
+base = "https://kilian-nagel.github.io/Portfolio/";
+
 const biographieData = [
     {
         title:"Compétences",
-        text:"Mes compétences techniques et interpersonnelles"
+        text:"Mes compétences techniques et interpersonnelles",
+        url:base+"index.html#skills"
     },
     {
         title:"Mon parcours",
-        text:"Mon parcours scolaire"
+        text:"Mon parcours scolaire",
+        url:base+"index.html#parcours"
     },
 ];
 
 const contactData = [
     {
         title:"Mail",
-        text:"Contacter par mail"
+        text:"Contacter par mail",
+        url:"mailto:nagelkilian05@gmail.com"
     },
     {
         title:"Télephone",
