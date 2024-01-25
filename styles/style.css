@@ -327,6 +327,7 @@ main {
     flex-shrink: 0;
     gap:1rem;
     padding-top:var(--spacing-md);
+    width: 400px;
     max-width: 400px;
 }
 
@@ -374,6 +375,7 @@ main {
 
 @media (max-width:900px) {
     #projects .container {
+        width: 325px;
         max-width: 325px;
     }
 }
