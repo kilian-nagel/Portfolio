@@ -1,5 +1,5 @@
 
-base = "file:///C:/Users/admin/Downloads/Portfolio/Portfolio/";
+base = "https://kilian-nagel.github.io/Portfolio/";
 
 const biographieData = [
     {
