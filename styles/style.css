@@ -207,27 +207,27 @@ main {
 }
 
 #skills .abilities:nth-of-type(1) .container:nth-child(1){
-    background-color: #023e8a;
+    background:#2B7DF6;
 }
 
 #skills .abilities:nth-of-type(1) .container:nth-child(2){
-    background-color: #0077b6;
+    background: #4F92F8;
 }
 
 #skills .abilities:nth-of-type(1) .container:nth-child(3){
-    background-color: rgba(20,110,245,.95);
+    background: #72A8F9;
 }
 
 #skills .abilities:nth-of-type(2) .container:nth-child(1){
-    background-color: #0096c7;
+    background: #95BEFB;
 }
 
 #skills .abilities:nth-of-type(2) .container:nth-child(2){
-    background-color: #00b4d8;
+    background: #ADCCFC;
 }
 
 #skills .abilities:nth-of-type(2) .container:nth-child(3){
-    background-color: #90e0ef;
+    background: #D0E2FD;
 }
 
 #skills .abilities .container .header img {
