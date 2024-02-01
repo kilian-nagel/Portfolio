@@ -388,6 +388,10 @@ main {
     padding-top: 4rem;
 }
 
+#technologies h3 {
+    font-weight: 700;
+}
+
 #technologies .content .badges {
     padding:.5rem 0 var(--spacing-md) 0;
     display: flex;
