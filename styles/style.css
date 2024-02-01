@@ -383,6 +383,12 @@ main {
     padding-bottom: var(--spacing-md);
 }
 
+#technologies .technologies {
+    background:#2B7DF6;
+    border-radius: 12px;
+    padding: var(--spacing-md);
+}
+
 #technologies .content h2 {
     padding-bottom: 1.5rem;
     padding-top: 4rem;
