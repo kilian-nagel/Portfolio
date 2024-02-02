@@ -132,8 +132,8 @@
 }
 
 #sections h3 {
-    color:gray;
-    font-size: var(--fs-300);
+    color:white;
+    font-size: var(--fs-400);
     padding-bottom: var(--spacing-sm3);
 }
 
@@ -164,5 +164,7 @@
     gap: var(--spacing-md);
 }
 
-
+p {
+    line-height: 27px;
+}
 
