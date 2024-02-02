@@ -407,7 +407,9 @@ main {
 
 #technologies .content .badge {
     display: inline-block;
-    background-color: var(--background-muted-dark);
+    background-color:#4F92F8;
+    color:white;
+    font-weight: 700;
     padding:0.25rem 1rem;
     border-radius: 8px;
 }
