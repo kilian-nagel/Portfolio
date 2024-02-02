@@ -139,6 +139,15 @@
     }
 } 
 
+#header.contracted {
+    max-width: 900px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(16px);
+    top:1rem;
+    position: sticky;
+}
+
+
 @media (max-width: 920px) {
     #header {
         #toggleMenu {
