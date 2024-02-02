@@ -110,6 +110,7 @@
 
 #sections > .content {
     display: flex;
+    max-width: 720px;
     flex-direction: column;
     gap:var(--spacing-md);
 }
