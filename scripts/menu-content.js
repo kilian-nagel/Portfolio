@@ -48,24 +48,13 @@ function buildSubmenuContainer(data){
     const linkWrapper = buildElement("a","");
     linkWrapper.setAttribute('href',data.url);
     const container = buildElement("div",{"className":"container"});
-    const title = buildElement("h3",{"className":"fs-0","text":data.title});
-    const text = buildElement("p",{"className":"text fs-0","text":data.text});
+    const title = buildElement("h3",{"className":"fs-0","textContent":data.title});
+    const text = buildElement("p",{"className":"text fs-0","textContent":data.text});
 
     container.appendChild(title);
     container.appendChild(text);
     linkWrapper.appendChild(container);
     return linkWrapper;
-}
-
-function buildElement(elementType,data){
-    const element = document.createElement(elementType);
-    if(data.hasOwnProperty("className") && !isStringEmpty(data.className) && isString(data.className)){
-        element.className = data.className;
-    }
-    if(data.hasOwnProperty("text") && !isStringEmpty(data.className) && isString(data.className)){
-        element.textContent = data.text;
-    }
-    return element;
 }
 
 function popDirectory(path){
