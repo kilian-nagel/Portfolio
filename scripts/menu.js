@@ -78,4 +78,23 @@ function getElementWidth(query){
     return el.offsetWidth;
 }
 
+/* Data 
+=============== */
+
+function fetchData(){
+    const query ={
+        "query": "{posts { title author { id } }}"
+      }
+    const url = 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clryyxh22000008ldg7y04xui/master/'+query;
+    fetch(url,{
+        method:'GET',
+        headers:{
+            "Access-Control-Allow-Origin":"*",
+        }
+    })
+.then(res => res.json())
+.then(res => console.log(res.data));
+}
+
+fetchData()
 initListeners();
