@@ -28,10 +28,9 @@ function initListeners(){
 
 function initDocumentListener(){
     const nav = document.getElementById("header");
-    const treshold = 250
+    const treshold = 250;
     document.addEventListener("scroll",()=>{
-        const top = document.documentElement.scrollTop;
-        if(top>treshold){
+        if(document.documentElement.scrollTop>treshold){
             nav.classList.add("contracted");
         } else {
             nav.classList.remove("contracted");
