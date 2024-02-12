@@ -38,7 +38,7 @@
             }
             
             .main {
-                padding: 0 var(--spacing-xl);
+                padding: var(--spacing-md) var(--spacing-xl);
 
                 a {
                     font-weight: 700;
@@ -51,6 +51,12 @@
                     font-size:6rem;
                     padding: 1rem 0;
                 }
+            }
+
+            a {
+                color:black;
+                font-size: var(--fs-400);
+                font-weight: 700;
             }
         }
     }
