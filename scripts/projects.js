@@ -32,7 +32,6 @@ function buildInfo(data){
     const excerpt = buildElement("p",{className:"text fs-200",textContent:data.excerpt});
     up.append(title,badgesSection,excerpt);
 
-    l(data);
     const down = buildLinkSection(data.slug);
 
     info.append(up,down);
@@ -52,7 +51,7 @@ function buildLinkSection(pageName){
     const container = buildElement("div",{className:"down"});
     const link = buildElement("a",{className:"link",textContent:"voir le projet",href:`./pages/${pageName}.html`});   
     container.append(link);
-    return container;   
+    return container;
 }
 
 buildProjectsCarousel();
