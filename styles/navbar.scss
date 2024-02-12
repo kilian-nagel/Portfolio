@@ -163,4 +163,10 @@
             }
         }
     }
+    #header.contracted {
+        top:0;
+        background: black;
+        border-radius: 0px;
+        border-bottom:solid var(--background-muted-dark) 2px;
+    }
 }
