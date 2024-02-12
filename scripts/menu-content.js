@@ -1,16 +1,15 @@
 
-base = "https://kilian-nagel.github.io/Portfolio/";
 
 const biographieData = [
     {
         title:"Compétences",
         text:"Mes compétences techniques et interpersonnelles",
-        url:base+"index.html#skills"
+        url:baseUrl+"index.html#skills"
     },
     {
         title:"Mon parcours",
         text:"Mon parcours scolaire",
-        url:base+"index.html#parcours"
+        url:baseUrl+"index.html#parcours"
     },
 ];
 

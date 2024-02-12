@@ -1,16 +1,16 @@
 
 const linksClassName = "nav-link";
 const mobileLinks = [
-    { textContent: "biographie",id: "lien-biographie",href:"./index.html#biographie",color:"black"},
-    { textContent: "projets",id:"lien-projets",href:"./index.html#projects",color:"black"},
-    { textContent: "projet professionnel",id:"lien-professionnel",href:"./pages/projet-professionnel.html",color:"black"},
-    { textContent: "contact",id:"lien-contact",href:"mailto:nagelkilian05@gmail.com",color:"black"},
+    { textContent: "biographie",id: "lien-biographie",href:baseUrl+"index.html#biographie",color:"black"},
+    { textContent: "projets",id:"lien-projets",href:baseUrl+"index.html#projects",color:"black"},
+    { textContent: "projet professionnel",id:"lien-professionnel",href:baseUrl+"/pages/projet-professionnel.html",color:"black"},
+    { textContent: "contact",id:"lien-contact",href:baseUrl+"mailto:nagelkilian05@gmail.com",color:"black"},
 ]
 
 const normalLinks = [
-    { textContent: "biographie",href:"#biographie"},
-    { textContent: "projets",href:"#projects"},
-    { textContent: "projet professionnel",href:"./pages/projet-professionnel.html"},
+    { textContent: "biographie",href:baseUrl+"index.html#biographie"},
+    { textContent: "projets",href:baseUrl+"index.html#projects"},
+    { textContent: "projet professionnel",href:baseUrl+"pages/projet-professionnel.html"},
     { textContent: "contact",href:"mailto:nagelkilian05@gmail.com"},
 ]
 
@@ -27,7 +27,7 @@ function buildNavbar() {
 
 function buildLogo() {
     const logo = buildElement("a");
-    logo.href = "#home";
+    logo.href = baseUrl+"index.html#home";
 
     const span = buildElement("span", { className: "fs-200 bold-900", textContent: "KN" });
     logo.appendChild(span);
