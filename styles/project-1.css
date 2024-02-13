@@ -128,10 +128,6 @@
     padding: var(--spacing-sm2) var(--spacing-sm);
 }
 
-#sections h2 {
-    padding-bottom:var(--spacing-sm);
-}
-
 #sections h3 {
     color:white;
     font-size: var(--fs-400);
@@ -163,6 +159,16 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
+}
+
+#sections p {
+    font-size: var(--fs-200);
+    color:var(--text-primary);
+}
+
+#sections h2 {
+    font-size: var(--fs-700);
+    font-weight: 900;
 }
 
 p {
