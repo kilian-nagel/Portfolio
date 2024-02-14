@@ -1,0 +1,10 @@
+name: webhook
+on:
+  repository_dispatch:
+    types:
+      - webhook
+jobs:
+  webhook:
+    runs-on: ubuntu-lastest
+    steps:
+      - run: "echo webhook triggered"
