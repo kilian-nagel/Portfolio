@@ -1,6 +1,6 @@
 
-const apiUrl = process.env.API_URL;
-const authToken = process.env.AUTH_TOKEN;
+const apiUrl = NEXT_PUBLIC_API_URL;
+const authToken = NEXT_PUBLIC_AUTH_TOKEN;
 
 
 function getShortProjectQuery(){
