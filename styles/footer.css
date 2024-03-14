@@ -1,28 +1,28 @@
 #footer {
-  border-top: solid 2px rgb(20, 20, 20);
+    border-top: solid 2px rgb(20, 20, 20);
 }
 #footer .content {
-  padding: var(--spacing-xl) var(--spacing-xl);
-  max-width: 1500px;
-  margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-xl);
+    max-width: 1500px;
+    margin: 0 auto;
 }
 #footer h3 {
-  font-weight: 900;
-  color: rgb(20, 20, 20);
+    font-weight: 900;
+    color: rgb(20, 20, 20);
 }
 #footer .text-heading {
-  font-weight: 700;
-  padding-bottom: 0.5rem;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
 }
 #footer .links-section {
-  padding-top: var(--spacing-md);
-  display: flex;
-  gap: var(--spacing-md);
-  flex-wrap: wrap;
+    padding-top: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
 }
 #footer .links-section .items {
-  min-width: 250px;
+    min-width: 250px;
 }
 #footer .copyright-section {
-  padding-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
 }

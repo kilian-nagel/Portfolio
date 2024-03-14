@@ -1,25 +1,24 @@
 main {
-  padding: var(--spacing-xxl) var(--spacing-xl) 4rem var(--spacing-xl);
-  max-width: 1500px;
-  margin: 0 auto;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 p {
-  max-width: 900px;
+    max-width: 900px;
 }
 
 h2 {
-  padding-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .goals {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.5rem;
-  gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    gap: 1.5rem;
 }
 .goals h3 {
-  font-weight: 700;
-  color: var(--text-secondary);
-  padding-bottom: 0.25rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    padding-bottom: 0.25rem;
 }

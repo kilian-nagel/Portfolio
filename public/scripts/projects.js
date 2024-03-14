@@ -17,7 +17,7 @@ async function buildProjects(){
 
 function buildProject(data){
     const root = buildElement("div",{className:"container"});
-    const img = buildElement("div",{style:"height:270px;background: url('./media/nodes.jpg') center center/cover"});
+    const img = buildElement("div",{style:"height:270px;background: url('/media/nodes.jpg') center center/cover"});
     const info = buildInfo(data);
     root.append(img,info);
     return root;

@@ -1,14 +1,15 @@
-a , button {
-    background:none;
-    border:none;
+a,
+button {
+    background: none;
+    border: none;
     outline: none;
     text-decoration: none;
-    color:white;
+    color: white;
 }
 
-u {    
+u {
     border-bottom: 1px dotted white;
-    color:var(--text-primary);
+    color: var(--text-primary);
     text-decoration: none;
 }
 

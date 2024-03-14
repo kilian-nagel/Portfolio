@@ -1,8 +1,7 @@
-
-@import "mixins.scss";
+@import 'mixins.scss';
 
 main {
-    padding:var(--spacing-xxl) var(--spacing-xl) 4rem var(--spacing-xl);
+    padding: var(--spacing-xxl) var(--spacing-xl) 4rem var(--spacing-xl);
     max-width: 1500px;
     margin: 0 auto;
 }
@@ -12,14 +11,14 @@ p {
 }
 
 h2 {
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 }
 
 .goals {
     display: flex;
     flex-direction: column;
     margin-top: 1.5rem;
-    gap:1.5rem;
+    gap: 1.5rem;
 
     h3 {
         @include subtitle;

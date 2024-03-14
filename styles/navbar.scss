@@ -1,11 +1,10 @@
-
 #header {
-    margin-top:1rem;
+    margin-top: 1rem;
     padding: var(--spacing-md) var(--spacing-xl);
     border-radius: 12px;
     margin: 0 auto;
     max-width: 1500px;
-    z-index:999;
+    z-index: 999;
     transition: top 250ms;
 
     .nav {
@@ -36,25 +35,25 @@
                 justify-content: space-between;
                 padding: var(--spacing-md) var(--spacing-xl) 0 var(--spacing-xl);
             }
-            
+
             .main {
                 padding: var(--spacing-md) var(--spacing-xl);
 
                 a {
                     font-weight: 700;
-                    color:black
+                    color: black;
                 }
 
                 h3 {
                     white-space: nowrap;
-                    color:rgba(215,215,215);
-                    font-size:6rem;
+                    color: rgba(215, 215, 215);
+                    font-size: 6rem;
                     padding: 1rem 0;
                 }
             }
 
             a {
-                color:black;
+                color: black;
                 font-size: var(--fs-400);
                 font-weight: 700;
             }
@@ -143,16 +142,15 @@
         transform: scale(1);
         opacity: 1;
     }
-} 
+}
 
 #header.contracted {
     max-width: 900px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(16px);
-    top:1rem;
+    top: 1rem;
     position: sticky;
 }
-
 
 @media (max-width: 920px) {
     #header {
@@ -170,9 +168,9 @@
         }
     }
     #header.contracted {
-        top:0;
+        top: 0;
         background: black;
         border-radius: 0px;
-        border-bottom:solid var(--background-muted-dark) 2px;
+        border-bottom: solid var(--background-muted-dark) 2px;
     }
 }

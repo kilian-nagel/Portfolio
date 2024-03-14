@@ -70,7 +70,6 @@ function resolveFilepath(fileName){
     if(curPath.includes("pages")){
         if(fileName=="index.html"){
             curPath = popDirectory(curPath);
-            console.log(curPath);
             curPath += "index.html";
         } else {
             curPath = curPath + fileName;
@@ -89,5 +88,3 @@ function resolveFilepath(fileName){
 function getCwdPath() {
     return popDirectory(window.location.pathname);
 }
-
-console.log(resolveFilepath("index.html"));

@@ -7,7 +7,7 @@ function buildBadge(text) {
 
 function buildSection(data) {
     const section = buildElement("section", { id: "presentation" });
-    section.appendChild(buildImage(data.image));
+    section.appendChild(buildImage(data.coverImage.url));
     const info = buildInfo(data);
     section.appendChild(info);
     return section;
@@ -114,6 +114,8 @@ function buildPage(data){
     document.querySelector("main").insertBefore(info,sections);
     document.querySelector("main").insertBefore(presentation,info);
 }
+
+
 
 (async()=>{
     const data = await getProjectsLongFormat("ckadrcx4g00pw01525c5d2e56");

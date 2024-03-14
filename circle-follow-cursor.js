@@ -5,10 +5,8 @@ function initListeners(){
 
     function handleMouseMove(e){    
         if(checkIfCursorPosInProject(x,y)){
-            l("true");
             cursor.style.display = 'flex';
         } else  {
-            l("false");
             cursor.style.display = 'none';
         }
         cursor.style.top = e.pageY - (cursor.offsetHeight/2) + "px";
@@ -22,7 +20,6 @@ function checkIfContainerInContainer(elt){
     parent = elt.parentNode;
     if(parent===null) return;
     while(parent!==null){
-        l(parent);
         if(parent.className==="container"){
             return true;
         }

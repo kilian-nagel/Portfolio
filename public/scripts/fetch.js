@@ -28,6 +28,9 @@ function getLongProjectQuery(id){
       typeOfProject
       typeOfApplication
       dates
+      coverImage {
+        url
+      }
       content {
         html
       }

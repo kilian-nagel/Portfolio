@@ -1,6 +1,5 @@
-
 #footer {
-    border-top: solid 2px rgb(20,20,20);
+    border-top: solid 2px rgb(20, 20, 20);
     .content {
         padding: var(--spacing-xl) var(--spacing-xl);
         max-width: 1500px;
@@ -9,18 +8,18 @@
 
     h3 {
         font-weight: 900;
-        color:rgb(20,20,20);
+        color: rgb(20, 20, 20);
     }
 
     .text-heading {
         font-weight: 700;
-        padding-bottom: .5rem;
+        padding-bottom: 0.5rem;
     }
 
     .links-section {
-        padding-top:var(--spacing-md);
+        padding-top: var(--spacing-md);
         display: flex;
-        gap:var(--spacing-md);
+        gap: var(--spacing-md);
         flex-wrap: wrap;
 
         .items {

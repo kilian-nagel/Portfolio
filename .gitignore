@@ -2,3 +2,4 @@ mixins.css
 .github/workflows/node_modules/
 node_modules/
 .next/
+.env*
