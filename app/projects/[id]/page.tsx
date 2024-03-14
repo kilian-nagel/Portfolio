@@ -20,11 +20,8 @@ import { fetcher } from '../../../data/fetch';
 import useSWR from 'swr';
 import { Category } from '../../../components/projectPage/category';
 import sanitizeHtml from 'sanitize-html';
-import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
-import { Navbar } from '../../../components/nav/navbar';
-import { Footer } from '../../../components/footer';
 import Skeleton from 'react-loading-skeleton';
-import Image from 'next/image';
+import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
 export default function Page({ params }: { params: { id: string } }) {
     // Si la clé n'est pas chargé on renvoie un message d'attente à l'user
     const startCondition = !process.env.NEXT_PUBLIC_API_URL || !params.id;
@@ -77,7 +74,6 @@ export default function Page({ params }: { params: { id: string } }) {
 
 
   return (
-    <ErrorBoundary fallback={<p>Error occurred.</p>}>
       <main>
         <section id="presentation">
           <img 
@@ -125,6 +121,5 @@ export default function Page({ params }: { params: { id: string } }) {
             </div>
         </div>
       </main>
-    </ErrorBoundary>
   );
 }
