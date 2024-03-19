@@ -1,13 +1,3 @@
-import '../styles/footer.css';
-import '../styles/mixins.css';
-import '../styles/navbar.css';
-import '../styles/normalize.css';
-import '../styles/reset.css';
-import '../styles/style.css';
-import '../styles/utility.css';
-import '../styles/variables.css';
-import '../styles/project-1.css';
-import '../styles/projet-professionnel.css';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { Carousel } from '../components/carousel';
 import Image from 'next/image';

@@ -5,23 +5,12 @@ import {
     ILongProject,
     ILongProjectsApiResponse
 } from '../../../components/interfaces/project';
-import '../../../styles/footer.css';
-import '../../../styles/mixins.css';
-import '../../../styles/navbar.css';
-import '../../../styles/normalize.css';
-import '../../../styles/reset.css';
-import '../../../styles/style.css';
-import '../../../styles/utility.css';
-import '../../../styles/variables.css';
-import '../../../styles/project-1.css';
-import '../../../styles/projet-professionnel.css';
 import { getLongProjectQuery } from '../../../data/queries';
 import { fetcher } from '../../../data/fetch';
 import useSWR from 'swr';
 import { Category } from '../../../components/projectPage/category';
 import sanitizeHtml from 'sanitize-html';
 import Skeleton from 'react-loading-skeleton';
-import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
 export default function Page({ params }: { params: { id: string } }) {
     // Si la clé n'est pas chargé on renvoie un message d'attente à l'user
     const startCondition = !process.env.NEXT_PUBLIC_API_URL || !params.id;
