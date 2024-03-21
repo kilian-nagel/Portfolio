@@ -7,7 +7,7 @@ export const fetcher = async <T extends Iresponse>(
 ): Promise<T | undefined> => {
     try {
         const urlWithQuery = `${url}?query=${query}`;
-
+        
         const headers = {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_AUTH_TOKEN}`
@@ -25,6 +25,8 @@ export const fetcher = async <T extends Iresponse>(
         }
 
         const data = await res.json();
+        console.log("data");
+        console.log(data);
         return data;
     } catch (error) {
         console.error('Fetch error:', error);

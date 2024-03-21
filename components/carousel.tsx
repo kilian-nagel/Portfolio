@@ -76,6 +76,8 @@ export const Carousel: React.FC = () => {
         </div>
     ));
 
+    console.log(data);
+
     if (isLoading) {
         return <div className="content">{repeatedElements}</div>;
     }
