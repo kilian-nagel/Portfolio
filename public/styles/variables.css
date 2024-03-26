@@ -17,6 +17,7 @@
     --background-muted-light: rgba(255, 255, 255, 0.1);
     --background-muted-dark: rgb(15, 15, 15);
     --background-blur: rgba(0, 0, 0, 0.6);
+    --background-accent:#2b7df6;
     --border-primary: rgb(45, 45, 45);
 
     --spacing-xxl: 6rem;

@@ -14,8 +14,14 @@ export const MobileNavbar: React.FC<props> = ({ display, setDisplay }) => {
         <div
             id="fullscreenMenu"
             style={{
+                height:600,
+                top:"50%",
+                left:"50%",
+                transform: "translate(-50%, -50%)",
+                position:"absolute",
                 display: display ? 'flex' : 'none',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                zIndex:100
             }}
         >
             <div

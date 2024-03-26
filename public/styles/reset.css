@@ -9,7 +9,6 @@ button {
 
 u {
     border-bottom: 1px dotted white;
-    color: var(--text-primary);
     text-decoration: none;
 }
 

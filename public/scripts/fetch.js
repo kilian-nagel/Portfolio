@@ -1,6 +1,6 @@
 
-const apiUrl = NEXT_PUBLIC_API_URL;
-const authToken = NEXT_PUBLIC_AUTH_TOKEN;
+const apiUrl = API_URL;
+const authToken = AUTH_TOKEN;
 
 
 function getShortProjectQuery(){
