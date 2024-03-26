@@ -28,10 +28,10 @@ export const MobileNavbar: React.FC<props> = ({ display, setDisplay }) => {
                 style={{
                     display: 'flex',
                     justifyContent: 'space-between',
-                    padding: 'var(--spacing-md) var(--spacing-xl)'
+                    padding: 'var(--spacing-xxl) var(--spacing-xxl) 0 var(--spacing-xxl)'
                 }}
             >
-                <Logo theme={Theme.DARK}></Logo>
+                <p style={{fontWeight:700,color:"black"}}>Navigation</p>
                 <Image
                     width={16}
                     height={16}
@@ -48,8 +48,8 @@ export const MobileNavbar: React.FC<props> = ({ display, setDisplay }) => {
                 style={{
                     height: '100%',
                     display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    padding:"0 var(--spacing-xxl)"
                 }}
             >
                 <ul>
@@ -60,7 +60,7 @@ export const MobileNavbar: React.FC<props> = ({ display, setDisplay }) => {
                                     onClick={() => setDisplay(false)}
                                     style={{
                                         color: 'black',
-                                        fontSize: 24,
+                                        fontSize: 'var(--fs-700)',
                                         fontWeight: 700
                                     }}
                                     href={link.url}
