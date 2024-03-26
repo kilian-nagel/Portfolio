@@ -18,10 +18,28 @@ export const linksItems: item[] = [
 	{ textContent: "projets", url: "/" },
 ];
 
+export function enableScroll() {
+	// Enable scrolling (to re-enable scrolling)
+	document.body.style.overflow = "";
+	// or
+	document.documentElement.style.overflow = "";
+}
+
+export function disableScroll() {
+	// Disable scrolling
+	document.body.style.overflow = "hidden";
+	// or
+	document.documentElement.style.overflow = "hidden";
+}
+
 export const Navbar: React.FC = () => {
 	const [display, setDisplay] = useState<boolean>(false);
 	const blurDisplay = display ? "block" : "none";
-	console.log(blurDisplay);
+	if (display) {
+		disableScroll();
+	} else {
+		enableScroll();
+	}
 	return (
 		<header id="header">
 			<div

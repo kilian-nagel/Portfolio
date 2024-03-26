@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { disableScroll, enableScroll } from './navbar';
 
 interface props {
     text: string;
@@ -21,4 +22,6 @@ function hideFullScreenNavbar() {
     if (fullscreenMenu) {
         fullscreenMenu.classList.remove('menu-open');
     }
+
+    enableScroll();
 }
