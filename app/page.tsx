@@ -159,7 +159,7 @@ export default function Page() {
 								<p className="text">Projets en groupe</p>
 							</div>
 						</div>
-						<img className="deco-sphere" src="/media/shape.png" style={{position:"absolute",bottom:0,right:120,zIndex:-5}} width={400} height={400} alt="" />
+						<Image className="deco-sphere" src="/media/shape.png" style={{position:"absolute",bottom:0,right:120,zIndex:-5}} width={400} height={400} alt="" priority={true} />
 					</div>
 				</section>
 
