@@ -14,9 +14,9 @@ interface item {
 
 export const linksItems: item[] = [
 	{ textContent: "accueil", url: "/" },
-	{ textContent: "biographie", url: "/#biographie" },
 	{ textContent: "projets", url: "/#projects" },
-	{textContent:"apprentissages",url:"/apprentissages"}
+	{textContent:"apprentissages",url:"/apprentissages"},
+	{ textContent: "contact", url: "/contact" }
 ];
 
 export function enableScroll() {

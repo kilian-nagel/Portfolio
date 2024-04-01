@@ -186,13 +186,13 @@ export default function Page({ params }: { params: { id: string } }) {
 						}}>
 						<RoundBadge
 							url={"/media/icones/mail.svg"}
-							rotate={0}></RoundBadge>
+							rotate={0} link={"mailto:nagelkilian05@gmail.com"}></RoundBadge>
 						<RoundBadge
 							url={"/media/icones/github.svg"}
-							rotate={0}></RoundBadge>
+							rotate={0} link={"https://github.com/kilian-nagel"}></RoundBadge>
 						<RoundBadge
 							url={"/media/icones/arrow-down.svg"}
-							rotate={225}></RoundBadge>
+							rotate={225} link={"mailto:nagelkilian05@gmail.com"}></RoundBadge>
 					</div>
 					<div
 						className="cta-section"
@@ -211,7 +211,7 @@ export default function Page({ params }: { params: { id: string } }) {
 						<div>
 							<RoundBadge
 								url={"/media/icones/arrow-down.svg"}
-								rotate={45}></RoundBadge>
+								rotate={45} link={""}></RoundBadge>
 						</div>
 					</div>
 				</div>
