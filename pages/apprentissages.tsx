@@ -68,6 +68,14 @@ const parts3 = [
 	{
 		name:"AC 4 – Définir et mettre en œuvre une démarche de suivi de projet",
 		content:"Lors de la SAE de gestion d'enchères nous avons dû réflechir à une démarche de suivi de projet et la mettre en oeuvre. Ceci s'est concrétisé par l'application des rituels de la méthodologie scrum: sprint planning, daily scrum, sprint review et sprint retrospective. Ceci nous a permis d'avoir une idée plus claire l'avancement du projet, de pouvoir détecter de potentiels obstacles et les prévoir."
+	},
+	{
+		name:"CE – communiquer efficacement avec les différents acteurs d'un projet",
+		content:"Au cours des divers projets communiquer efficacement a été un élément clé pour la réussite de nos projets. La communication s'effectuait par messages ou appels vocaux en utilisant des plateformes telles que discord. J'ai appris à décrire clairement mes intentions en utilisant les mots et la syntaxe adaptés à la situation."
+	},
+	{
+		name:"CE – Adopter une démarche proactive, créative et critique",
+		content:"J'ai fait preuve d'initiative lors des sprints des sprints de SAE en réfléchissant et en faisant une introspection des éléments que je pouvais améliorer dans mon comportement et ma façon de travailler. Au sein de notre groupe on a tous fait cet effort, ce qui nous a permis de prendre plus conscience des faiblesses et forces de chacun. Je pense que c'est une bonne habitude à prendre car elle nous permet de continuellement nous améliorer."
 	}
 ]
 
