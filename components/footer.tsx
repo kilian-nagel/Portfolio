@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FooterSection } from "./footer/footerSections";
 
 const footerLinks = [
@@ -15,9 +16,9 @@ const footerLinks = [
 				ariaText: "se rendre sur ma page github",
 			},
 			{
-				text: "Github",
-				url: "https://github.com/kilian-nagel",
-				ariaText: "se rendre sur ma page github",
+				text: "LinkedIn",
+				url: "https://fr.linkedin.com/in/kilian-nagel",
+				ariaText: "se rendre sur ma page linkedIn",
 			},
 		],
 	},
@@ -26,17 +27,17 @@ const footerLinks = [
 		links: [
 			{
 				text: "Biographie",
-				url: "#biographie",
+				url: "/#biographie",
 				ariaText: "se rendre sur la parrtie biographie",
 			},
 			{
 				text: "Projets",
-				url: "#projects",
+				url: "/#projects",
 				ariaText: "se rendre sur la page projets",
 			},
 			{
 				text: "Projet professionnel",
-				url: "projet-professionnel.html",
+				url: "/#projet-professionnel",
 				ariaText: "se rendre sur la page projet professionnel",
 			},
 		],
@@ -70,7 +71,7 @@ export const Footer: React.FC = () => {
 				</div>
                 <div className="cta-container" style={{position:"relative",paddingBottom:"2rem"}}>
                     <h3 className="fs-500" style={{color:"white",paddingBottom:"1rem"}}>Vous êtes convaincus ?</h3>
-                    <button style={{fontSize:20,fontWeight:700,background:"rgba(255,255,255,0.1)",padding:".5rem 1rem",borderRadius:"8px"}}>contactez-moi</button>
+                    <Link href={"mailto:nagelkilian05@gmail.com"} style={{fontSize:20,fontWeight:700,background:"rgba(255,255,255,0.1)",padding:".5rem 1rem",borderRadius:"8px"}}>contactez-moi</Link>
                 </div>
 			</div>
 		</footer>

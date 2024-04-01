@@ -146,7 +146,7 @@ export default function Page() {
 										style={{ height: 16 }}
 										alt="icone contact"
 									/>
-									<a className="text fs-200">
+									<a className="text fs-200" href="/CV.pdf" download={"CV"}>
 										Télécharger CV
 									</a>
 								</div>
