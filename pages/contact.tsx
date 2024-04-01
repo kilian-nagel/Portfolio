@@ -33,8 +33,8 @@ export default function Contact(){
                             url={"/media/icones/github.svg"}
                             rotate={0} link={"https://github.com/kilian-nagel"}></RoundBadge>
 						<RoundBadge
-                            url={"/media/icones/arrow-down.svg"}
-                            rotate={225} link={""}></RoundBadge>
+                            url={"/media/icones/linkedin.png"}
+                            rotate={0} link={"https://fr.linkedin.com/in/kilian-nagel"}></RoundBadge>
 					</div>
                 </div>
             </main>
