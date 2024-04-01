@@ -84,21 +84,20 @@ const technologies = [
 
 const parcours = [
 	{
-		title:"Supérieur",
-		text:"Acquisition du BUT (bachelor universitaire de technologie) en cours.",
-		info:"IUT Montpellier-Sète ● Montpellier, France ● 2022 - présent"
+		title: "Supérieur",
+		text: "Acquisition du BUT (bachelor universitaire de technologie) en cours.",
+		info: "IUT Montpellier-Sète ● Montpellier, France ● 2022 - présent",
 	},
 	{
-		title:"Lycée",
-		text:"Obtention du baccalauréat mention très Bien (2022).",
-		info:"Lycée Albert Einstein ● Bagnols-sur-cèze, France ● 2019 - 2022"
+		title: "Lycée",
+		text: "Obtention du baccalauréat mention très Bien (2022).",
+		info: "Lycée Albert Einstein ● Bagnols-sur-cèze, France ● 2019 - 2022",
 	},
 	{
-		title:"Collège",
-		text:"Obtention du brevet des collèges mention très bien (2019)",
-		info:"Lycée Albert Einstein ● Pont-saint-esprit, France ● 2015 - 2019"
-	}
-
+		title: "Collège",
+		text: "Obtention du brevet des collèges mention très bien (2019)",
+		info: "Lycée Albert Einstein ● Pont-saint-esprit, France ● 2015 - 2019",
+	},
 ];
 
 export default function Page() {
@@ -169,7 +168,20 @@ export default function Page() {
 								<p className="text">Projets en groupe</p>
 							</div>
 						</div>
-						<Image className="deco-sphere" src="/media/shape.png" style={{position:"absolute",bottom:0,right:120,zIndex:-5}} width={400} height={400} alt="" priority={true} />
+						<Image
+							className="deco-sphere"
+							src="/media/shape.png"
+							style={{
+								position: "absolute",
+								bottom: 0,
+								right: 120,
+								zIndex: -5,
+							}}
+							width={400}
+							height={400}
+							alt=""
+							priority={true}
+						/>
 					</div>
 				</section>
 
@@ -278,14 +290,25 @@ export default function Page() {
 					<div className="content">
 						<h2 className="fs-700 bold-900">Technologies</h2>
 						<div className="technologies">
-							{technologies.map((tech,i) => (
+							{technologies.map((tech, i) => (
 								<>
 									<TechnologyContainer
 										title={tech.title}
 										description={tech.description}
 										badges={tech.badges}
 									/>
-									{i!=technologies.length-1 ? <div className="separator" style={{height:"3px",background:"var(--background-muted-dark)",margin:'1.25rem 0 1rem 0'}}></div> : ''}
+									{i != technologies.length - 1 ? (
+										<div
+											className="separator"
+											style={{
+												height: "3px",
+												background:
+													"var(--background-muted-dark)",
+												margin: "1.25rem 0 1rem 0",
+											}}></div>
+									) : (
+										""
+									)}
 								</>
 							))}
 						</div>
@@ -299,9 +322,76 @@ export default function Page() {
 						Parcours
 					</h2>
 					<div className="content" style={{ maxWidth: "900px" }}>
-						{
-							parcours.map(p=><ParcoursContainer title={p.title} text={p.text} info={p.info}/>)
-						}
+						{parcours.map((p) => (
+							<ParcoursContainer
+								title={p.title}
+								text={p.text}
+								info={p.info}
+							/>
+						))}
+					</div>
+				</section>
+
+				<section id="projet-professionnel" style={{maxWidth:"1500px",padding:"0 var(--spacing-xl)"}}>
+					<h2 className="bold-900 fs-700">Projet professionnel</h2>
+					<p className="text fs-200">
+						Je vise à devenir développeur web avec une
+						spécialisation en création d’interfaces (front-end).
+						Pour cela, j'ai suivi des études dans le domaine de
+						l'informatique et du développement d'applications. À
+						l'avenir, j'ai défini plusieurs objectifs pour
+						progresser vers cette aspiration professionnelle
+					</p>
+
+					<div className="goals">
+						<div className="container">
+							<h3 className="bold-600 fs-500">Court-terme</h3>
+							<p className="text fs-200">
+								Dans cette phase initiale de mon parcours
+								professionnel, mon objectif principal est
+								d'acquérir une expérience concrète et pratique
+								dans le domaine du développement web, ce que je
+								compte réaliser en m'engageant dans un stage
+								enrichissant ou en intégrant un programme en
+								alternance.
+							</p>
+							<br />
+							<p className="text fs-200">
+								{" "}
+								Cette opportunité me permettra de mettre en
+								pratique les connaissances acquises au cours de
+								mes études et d'approfondir mes compétences
+								spécifiquement dans la création d’interfaces.
+							</p>
+						</div>
+						<div className="container">
+							<h3 className="bold-600 fs-500">Moyen-terme</h3>
+							<p className="text fs-200">
+								Par la suite, je prévois de parfaire mes
+								compétences en concluant mes études par
+								l'obtention d'un master en conception et
+								développement.
+							</p>
+							<br />
+							<p className="text fs-200">
+								Cette formation approfondie me permettra de
+								consolider mes bases en informatique et en
+								développement d'applications, offrant ainsi une
+								expertise solide et polyvalente dans mon domaine
+								d'intérêt
+							</p>
+						</div>
+						<div className="container">
+							<h3 className="bold-600 fs-500">Long-terme</h3>
+							<p className="text fs-200">
+								Enfin, je m'engage à poursuivre un apprentissage
+								continu pour affiner mes compétences existantes,
+								en développer de nouvelles et rester constamment
+								informé des avancées et des nouvelles
+								technologies dans le domaine du développement
+								web.
+							</p>
+						</div>
 					</div>
 				</section>
 			</main>
