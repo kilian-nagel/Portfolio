@@ -2,7 +2,6 @@ import { Footer } from '../components/footer';
 import { Navbar } from '../components/nav/navbar';
 
 import "../public/styles/footer.css";
-import "../public/styles/mixins.css";
 import "../public/styles/navbar.css";
 import "../public/styles/normalize.css";
 import "../public/styles/project-1.css";

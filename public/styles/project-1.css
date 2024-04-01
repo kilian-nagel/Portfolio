@@ -181,6 +181,10 @@
     font-weight: 900;
 }
 
+#sections img {
+    max-width: 100%;
+}
+
 p {
     line-height: 27px;
 }

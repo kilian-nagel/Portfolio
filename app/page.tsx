@@ -6,7 +6,6 @@ import { TechnologyContainer } from "../components/technologyContainer";
 import { ParcoursContainer } from "../components/parcoursContainer";
 
 import "../public/styles/footer.css";
-import "../public/styles/mixins.css";
 import "../public/styles/navbar.css";
 import "../public/styles/normalize.css";
 import "../public/styles/project-1.css";

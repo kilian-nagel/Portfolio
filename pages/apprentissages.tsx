@@ -1,6 +1,5 @@
 "use client";
 import "../public/styles/footer.css";
-import "../public/styles/mixins.css";
 import "../public/styles/navbar.css";
 import "../public/styles/normalize.css";
 import "../public/styles/project-1.css";
@@ -11,7 +10,6 @@ import "../public/styles/style.css";
 import "../public/styles/variables.css";
 import { Navbar } from "../components/nav/navbar";
 import { Footer } from "../components/footer";
-import { SkillContainer } from "../components/skillContainer";
 import { Skill } from "../components/skills/skillContainer";
 
 const parts = [
@@ -31,7 +29,8 @@ const parts = [
 			"Au fur et à mesure que j’ai appris à développer des applications de plus complexes, j’ai pu accroître ma panoplie de structures de données et d’algorithmes. Ceci m’a aidé à faire des choix plus éclairés pour mieux optimiser mes programmes et les rendre plus efficaces. Par exemple j'ai appris à utiliser les arbres pour faciliter la recherche et l'organisation d'information de façon hiérarchique, ou encore les listes chaînées qui sont excellentes lorsque j'ai besoin d'une structure de donnée dynamique.",
     }, 
     {
-        name:"CE "
+        name:"CE – Recenser les algorithmes et les structures de données usuels + CE - Justifier les choix et validant les résultats",
+        content:"Avant de mettre en place un algorithme (tri, recherche), j'analyse le problème que je dois résoudre afin d'employer l'algo et la structure de donnée approprié. Par exemple lors de la SAE concernant le système d'enchères nous devions garder les différentes mises associés aux utilisateurs, en réflechissant nous avons déterminer l'objectif était de pouvoir stocker une donnée et la retrouver à partir d'un identifiant ainsi nous avons fait le choix d'employer la Hashmap pour résoudre ce problème."
     }
 ];
 
