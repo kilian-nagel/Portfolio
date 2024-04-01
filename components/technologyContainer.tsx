@@ -13,7 +13,7 @@ export const TechnologyContainer:React.FC<props> = ({title,description,badges}) 
             <p>{description}</p>
             <div className="badges">
                 {
-                    badges.map(badge=><Badge text={badge}></Badge>)
+                    badges.map(badge=><Badge text={badge} key={Math.random()}></Badge>)
                 }
             </div>
         </div>

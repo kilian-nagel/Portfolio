@@ -149,7 +149,7 @@ export default function Page({ params }: { params: { id: string } }) {
 						<h3 className="bold-900 fs-900">{project.title}</h3>
 						<div className="badges">
 							{project.tags.map((tag) => (
-								<Badge key={tag} text={tag} />
+								<Badge key={Math.random()} text={tag} />
 							))}
 						</div>
 						<p className="text fs-200" style={{ maxWidth: 600 }}>
@@ -167,7 +167,7 @@ export default function Page({ params }: { params: { id: string } }) {
 						}}>
 						{Object.keys(metadata).map((key, i) => (
 							<Category
-								key={key}
+								key={Math.random()}
 								category={key}
 								content={metadata[key]}
 							/>

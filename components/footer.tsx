@@ -58,6 +58,7 @@ export const Footer: React.FC = () => {
 					<div className="links-section">
 						{footerLinks.map((section) => (
 							<FooterSection
+								key={Math.random()}
 								title={section.sectionTitle}
 								links={section.links}
 							/>

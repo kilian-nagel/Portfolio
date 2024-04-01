@@ -260,6 +260,7 @@ export default function Page() {
 					<div className="abilities">
 						{developmentSkills.map((x, i) => (
 							<SkillContainer
+								key={Math.random()}
 								index={i + 1}
 								title={x.title}
 								text={x.text}
@@ -278,6 +279,7 @@ export default function Page() {
 					<div className="abilities">
 						{softSkills.map((x, i) => (
 							<SkillContainer
+								key={Math.random()}
 								index={i + 1}
 								title={x.title}
 								text={x.text}
@@ -293,6 +295,7 @@ export default function Page() {
 							{technologies.map((tech, i) => (
 								<>
 									<TechnologyContainer
+										key={Math.random()}
 										title={tech.title}
 										description={tech.description}
 										badges={tech.badges}
@@ -324,6 +327,7 @@ export default function Page() {
 					<div className="content" style={{ maxWidth: "900px" }}>
 						{parcours.map((p) => (
 							<ParcoursContainer
+								key={Math.random()}
 								title={p.title}
 								text={p.text}
 								info={p.info}
@@ -334,7 +338,7 @@ export default function Page() {
 
 				<section id="projet-professionnel" style={{maxWidth:"1500px",padding:"0 var(--spacing-xl)"}}>
 					<h2 className="bold-900 fs-700">Projet professionnel</h2>
-					<p className="text fs-200">
+					<p className="text">
 						Je vise à devenir développeur web avec une
 						spécialisation en création d’interfaces (front-end).
 						Pour cela, j'ai suivi des études dans le domaine de
@@ -346,7 +350,7 @@ export default function Page() {
 					<div className="goals">
 						<div className="container">
 							<h3 className="bold-600 fs-500">Court-terme</h3>
-							<p className="text fs-200">
+							<p className="text">
 								Dans cette phase initiale de mon parcours
 								professionnel, mon objectif principal est
 								d'acquérir une expérience concrète et pratique
@@ -356,7 +360,7 @@ export default function Page() {
 								alternance.
 							</p>
 							<br />
-							<p className="text fs-200">
+							<p className="text">
 								{" "}
 								Cette opportunité me permettra de mettre en
 								pratique les connaissances acquises au cours de
@@ -366,14 +370,14 @@ export default function Page() {
 						</div>
 						<div className="container">
 							<h3 className="bold-600 fs-500">Moyen-terme</h3>
-							<p className="text fs-200">
+							<p className="text">
 								Par la suite, je prévois de parfaire mes
 								compétences en concluant mes études par
 								l'obtention d'un master en conception et
 								développement.
 							</p>
 							<br />
-							<p className="text fs-200">
+							<p className="text">
 								Cette formation approfondie me permettra de
 								consolider mes bases en informatique et en
 								développement d'applications, offrant ainsi une
@@ -383,7 +387,7 @@ export default function Page() {
 						</div>
 						<div className="container">
 							<h3 className="bold-600 fs-500">Long-terme</h3>
-							<p className="text fs-200">
+							<p className="text">
 								Enfin, je m'engage à poursuivre un apprentissage
 								continu pour affiner mes compétences existantes,
 								en développer de nouvelles et rester constamment

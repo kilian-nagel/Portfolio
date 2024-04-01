@@ -96,7 +96,7 @@ export const Carousel: React.FC = () => {
             <div className="content">
                 {data.data.posts.map((d) => (
                     <ProjectCard
-                        key={d.id}
+                        key={Math.random()}
                         title={d.title}
                         id={d.id}
                         tags={d.tags}

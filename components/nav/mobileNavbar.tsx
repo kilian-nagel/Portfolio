@@ -57,6 +57,7 @@ export const MobileNavbar: React.FC<props> = ({ display, setDisplay }) => {
                         return (
                             <li key={Math.random() * 10000000}>
                                 <Link
+                                    key={Math.random()}
                                     onClick={() => setDisplay(false)}
                                     style={{
                                         color: 'black',
