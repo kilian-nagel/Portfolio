@@ -15,7 +15,7 @@ interface item {
 export const linksItems: item[] = [
 	{ textContent: "accueil", url: "/" },
 	{ textContent: "biographie", url: "/#biographie" },
-	{ textContent: "projets", url: "/" },
+	{ textContent: "projets", url: "/#projects" },
 	{textContent:"apprentissages",url:"/apprentissages"}
 ];
 

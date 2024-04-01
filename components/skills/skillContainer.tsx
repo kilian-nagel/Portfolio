@@ -12,10 +12,10 @@ interface props {
 
 export const Skill: React.FC<props> = ({ title, parts }) => {
 	return (
-		<div>
+		<div style={{paddingTop:"var(--spacing-lg)"}}>
 			<h3
 				className="fs-400 bold-700"
-				style={{ paddingBottom: "1rem" }}>
+				style={{ paddingBottom: "1rem"}}>
 				{title}
 			</h3>
 			<div
@@ -25,7 +25,7 @@ export const Skill: React.FC<props> = ({ title, parts }) => {
 					gap: "var(--spacing-sm)",
 				}}>
 				{parts.map((part) => (
-					<Part name={part.name} content={part.content}></Part>
+					<Part key={Math.random()} name={part.name} content={part.content}></Part>
 				))}
 			</div>
 		</div>
