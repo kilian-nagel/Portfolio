@@ -16,20 +16,15 @@ export const linksItems: item[] = [
 	{ textContent: "accueil", url: "/" },
 	{ textContent: "biographie", url: "/#biographie" },
 	{ textContent: "projets", url: "/" },
+	{textContent:"apprentissages",url:"/apprentissages"}
 ];
 
 export function enableScroll() {
-	// Enable scrolling (to re-enable scrolling)
-	document.body.style.overflow = "";
-	// or
-	document.documentElement.style.overflow = "";
+
 }
 
 export function disableScroll() {
-	// Disable scrolling
-	document.body.style.overflow = "hidden";
-	// or
-	document.documentElement.style.overflow = "hidden";
+
 }
 
 export const Navbar: React.FC = () => {

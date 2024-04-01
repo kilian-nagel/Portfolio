@@ -8,10 +8,79 @@ import { getLongProjectQuery } from "../../../data/queries";
 import { fetcher } from "../../../data/fetch";
 import useSWR from "swr";
 import { Category } from "../../../components/projectPage/category";
-import sanitizeHtml from "sanitize-html";
 import Skeleton from "react-loading-skeleton";
-import Image from "next/image";
 import { RoundBadge } from "../../../components/roundBadge";
+
+import "../../../public/styles/footer.css";
+import "../../../public/styles/mixins.css";
+import "../../../public/styles/navbar.css";
+import "../../../public/styles/normalize.css";
+import "../../../public/styles/project-1.css";
+import "../../../public/styles/projet-professionnel.css";
+import "../../../public/styles/reset.css";
+import "../../../public/styles/utility.css";
+import "../../../public/styles/style.css";
+import "../../../public/styles/variables.css";
+
+function extractH2Elements(htmlString: string): string {
+	const parser = new DOMParser();
+	const doc = parser.parseFromString(htmlString, "text/html");
+	const h2Elements = Array.from(doc.querySelectorAll("h2"));
+	const resultList: string[] = [];
+
+	h2Elements.forEach((h2Element) => {
+		if (h2Element instanceof HTMLElement) {
+			const id =
+				h2Element.textContent
+					?.trim()
+					.toLowerCase()
+					.replace(/\s+/g, "-") || "";
+
+			resultList.push(
+				`<li className="text">
+                    <a href="#${id}">${h2Element.textContent?.trim()}</a>
+                </li>`
+			);
+		}
+	});
+
+	return resultList.join("\n");
+}
+
+function getH2ElementsContent(htmlString: string): string[] {
+	const parser = new DOMParser();
+	const doc = parser.parseFromString(htmlString, "text/html");
+	const h2Elements = doc.querySelectorAll("h2");
+	const h2Contents: string[] = [];
+
+	h2Elements.forEach((h2Element) => {
+		if (h2Element instanceof HTMLElement) {
+			const content = h2Element.textContent?.trim().toLowerCase();
+			h2Contents.push(content || "");
+		}
+	});
+
+	return h2Contents;
+}
+
+function replaceH2WithIds(htmlString: string, ids: string[]): string {
+	const regex = /<h2>(.*?)<\/h2>/g;
+	let index = 0;
+
+	return htmlString.replace(regex, (_, content) => {
+		const id = ids[index++];
+		return `<h2 id="${id}">${content}</h2>`;
+	});
+}
+
+function replaceImgWithImage(htmlString: string): string {
+    const regex = /<img\s+src="([^"]+)"\s+alt="([^"]+)"[^>]*\/>/g;
+
+    return htmlString.replace(regex, (_, src, alt) => {
+        return `<Image alt="${alt}" src="${src}" layout="fill" objectFit="contain" />`;
+    });
+}
+
 export default function Page({ params }: { params: { id: string } }) {
 	// Si la clé n'est pas chargé on renvoie un message d'attente à l'user
 	const startCondition = !process.env.NEXT_PUBLIC_API_URL || !params.id;
@@ -51,7 +120,7 @@ export default function Page({ params }: { params: { id: string } }) {
 
 	const project: ILongProject = data.data.posts[0];
 	if (!project || !project.content || !project.content.html)
-		return <div>error...</div>;
+		return <div>si rien ne s'affiche. rechargez la page.</div>;
 
 	const metadata = {
 		"Type de projet": project.typeOfProject,
@@ -59,8 +128,13 @@ export default function Page({ params }: { params: { id: string } }) {
 		Dates: project.dates,
 	};
 
+	const html = project.content.html;
+	const navList = extractH2Elements(html);
+	const h2Content = getH2ElementsContent(html);
+	let newHtml = replaceH2WithIds(html, h2Content);
+	newHtml = replaceImgWithImage(newHtml);
+
 	// On nettoie le html fourni par le CRM avant de l'injecter
-	const sanitizedHtml = sanitizeHtml(project.content.html);
 
 	return (
 		<main>
@@ -69,7 +143,7 @@ export default function Page({ params }: { params: { id: string } }) {
 				style={{
 					justifyContent: "space-between",
 					alignItems: "flex-end",
-          marginBottom:"var(--spacing-xl)"
+					marginBottom: "var(--spacing-xl)",
 				}}>
 				<div className="info">
 					<div className="up">
@@ -107,11 +181,11 @@ export default function Page({ params }: { params: { id: string } }) {
 							borderRadius: "8px",
 							minWidth: 400,
 							marginBottom: "var(--spacing-sm)",
-              display:"flex",
-              justifyContent:"end",
-              gap:".5rem"
+							display: "flex",
+							justifyContent: "end",
+							gap: ".5rem",
 						}}>
-            <RoundBadge
+						<RoundBadge
 							url={"/media/icones/mail.svg"}
 							rotate={0}></RoundBadge>
 						<RoundBadge
@@ -153,7 +227,7 @@ export default function Page({ params }: { params: { id: string } }) {
 				}}>
 				<div
 					style={{
-						background: "url(/media/nodes.jpg) center center/cover",
+						background: `url(${project.coverImage.url}) center center/cover`,
 						borderRadius: "8px",
 						height: 650,
 					}}></div>
@@ -163,17 +237,9 @@ export default function Page({ params }: { params: { id: string } }) {
 				<aside id="aside">
 					<div className="content">
 						<p className="text bold-700">Navigation</p>
-						<ul style={{ listStyle: "none" }}>
-							<li className="text">
-								<a href="#context">Contexte du projet</a>
-							</li>
-							<li className="text">
-								<a href="#skills">Apprentissages</a>
-							</li>
-							<li className="text">
-								<a href="./">Résultats</a>
-							</li>
-						</ul>
+						<ul
+							style={{ listStyle: "none" }}
+							dangerouslySetInnerHTML={{ __html: navList }}></ul>
 					</div>
 					<a id="top-link" href="#header">
 						aller à l'en-tête de page
@@ -181,7 +247,8 @@ export default function Page({ params }: { params: { id: string } }) {
 				</aside>
 				<div
 					className="content"
-					dangerouslySetInnerHTML={{ __html: sanitizedHtml }}></div>
+					dangerouslySetInnerHTML={{ __html: newHtml }}>
+				</div>
 			</div>
 		</main>
 	);

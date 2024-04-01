@@ -5,6 +5,17 @@ import { SkillContainer } from "../components/skillContainer";
 import { TechnologyContainer } from "../components/technologyContainer";
 import { ParcoursContainer } from "../components/parcoursContainer";
 
+import "../public/styles/footer.css";
+import "../public/styles/mixins.css";
+import "../public/styles/navbar.css";
+import "../public/styles/normalize.css";
+import "../public/styles/project-1.css";
+import "../public/styles/projet-professionnel.css";
+import "../public/styles/reset.css";
+import "../public/styles/utility.css";
+import "../public/styles/style.css";
+import "../public/styles/variables.css";
+
 const developmentSkills = [
 	{
 		title: "Webdesign",

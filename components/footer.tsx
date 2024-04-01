@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
 					</div>
 				</div>
                 <div className="cta-container" style={{position:"relative",paddingBottom:"2rem"}}>
-                    <h3 className="fs-600" style={{color:"white",paddingBottom:"1rem"}}>Vous êtes convaincus ?</h3>
+                    <h3 className="fs-500" style={{color:"white",paddingBottom:"1rem"}}>Vous êtes convaincus ?</h3>
                     <button style={{fontSize:20,fontWeight:700,background:"rgba(255,255,255,0.1)",padding:".5rem 1rem",borderRadius:"8px"}}>contactez-moi</button>
                 </div>
 			</div>

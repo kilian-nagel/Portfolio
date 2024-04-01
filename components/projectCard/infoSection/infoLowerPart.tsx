@@ -9,7 +9,7 @@ export const InfoLowerPart: React.FC<props> = ({ id }) => {
     return (
         <div className="down">
             <Link href={link} className="link">
-                lien d'accès
+                explorer
             </Link>
         </div>
     );

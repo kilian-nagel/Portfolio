@@ -1,6 +1,17 @@
 import { Footer } from '../components/footer';
 import { Navbar } from '../components/nav/navbar';
 
+import "../public/styles/footer.css";
+import "../public/styles/mixins.css";
+import "../public/styles/navbar.css";
+import "../public/styles/normalize.css";
+import "../public/styles/project-1.css";
+import "../public/styles/projet-professionnel.css";
+import "../public/styles/reset.css";
+import "../public/styles/utility.css";
+import "../public/styles/style.css";
+import "../public/styles/variables.css";
+
 export default function RootLayout({
     children
 }: {
@@ -10,15 +21,6 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 <title>Kilian Nagel - Portfolio</title>
-                <link rel="stylesheet" href="./styles/navbar.css" />
-                <link rel="stylesheet" href="./styles/footer.css" />
-                <link rel="stylesheet" href="./styles/normalize.css" />
-                <link rel="stylesheet" href="./styles/project-1.css" />
-                <link rel="stylesheet" href="./styles/reset.css" />
-                <link rel="stylesheet" href="./styles/style.css" />
-                <link rel="stylesheet" href="./styles/utility.css" />
-                <link rel="stylesheet" href="./styles/variables.css" />
-                <link rel="stylesheet" href="./styles/projet-professionnel.css" />
             </head>
             <body>
                 <Navbar></Navbar>
