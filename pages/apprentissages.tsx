@@ -83,14 +83,17 @@ const data = [
 	{
 		title: "Optimiser des applications",
 		parts: parts1,
+		niveau:"Acquis"
 	},
 	{
 		title: "Gérer des données de l’information",
-		parts:parts2
+		parts:parts2,
+		niveau:"Acquis"
 	},
 	{
 		title: "Conduire un projet",
-		parts:parts3
+		parts:parts3,
+		niveau:"Acquis"
 	},
 ];
 
@@ -109,7 +112,7 @@ export default function apprentissages() {
 					</div>
 				</div>
 				{
-					data.map(d=><Skill key={Math.random()} title={d.title} parts={d.parts}/>)
+					data.map(d=><Skill key={Math.random()} title={d.title} parts={d.parts} niveau={d.niveau}/>)
 				}
 			</main>
 			<Footer />

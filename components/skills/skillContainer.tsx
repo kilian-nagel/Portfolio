@@ -8,16 +8,17 @@ export interface part {
 interface props {
 	title: string;
 	parts: part[];
+	niveau:string
 }
 
-export const Skill: React.FC<props> = ({ title, parts }) => {
+export const Skill: React.FC<props> = ({ title, parts,niveau }) => {
 	return (
 		<div style={{paddingTop:"var(--spacing-lg)"}}>
 			<h3
-				className="fs-400 bold-700"
-				style={{ paddingBottom: "1rem"}}>
+				className="fs-400 bold-700">
 				{title}
 			</h3>
+			<p style={{ paddingBottom: "1rem"}}>Niveau de compétence : <u>{niveau}</u></p>
 			<div
 				style={{
 					display: "flex",
