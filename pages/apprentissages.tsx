@@ -106,7 +106,7 @@ export default function apprentissages() {
 					<h1 className="title fs-700 bold-900">Apprentissages</h1>
 					<div>
 						<p>
-							Découvez les différentes compétences que j'ai
+							Découvrez les différentes compétences que j'ai
 							développé au cours de cette année scolaire.
 						</p>
 					</div>
