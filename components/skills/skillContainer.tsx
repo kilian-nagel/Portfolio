@@ -26,7 +26,7 @@ export const Skill: React.FC<props> = ({ title, parts,niveau }) => {
 					gap: "var(--spacing-sm)",
 				}}>
 				{parts.map((part) => (
-					<Part key={Math.random()} key={Math.random()} name={part.name} content={part.content}></Part>
+					<Part key={Math.random()} name={part.name} content={part.content}></Part>
 				))}
 			</div>
 		</div>
