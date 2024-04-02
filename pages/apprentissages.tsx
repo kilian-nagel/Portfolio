@@ -19,19 +19,19 @@ const parts1 = [
 		name: "AC 1 – Choisir des structures de données complexes adaptées au problème",
 		content:
 			"Au fur et à mesure que j’ai appris à développer des applications de plus complexes, j’ai pu accroître ma panoplie de structures de données et d’algorithmes. Ceci m’a aidé à faire des choix plus éclairés pour mieux optimiser mes programmes et les rendre plus efficaces. Par exemple j'ai appris à utiliser les arbres pour faciliter la recherche et l'organisation d'information de façon hiérarchique, ou encore les listes chaînées qui sont excellentes lorsque j'ai besoin d'une structure de donnée dynamique.",
-		url: "",
+		url: "preuve-structure.png",
 	},
 	{
 		name: "AC 2 – Utiliser des techniques algorithmiques adaptées pour des problèmes",
 		content:
 			"Afin d'optimiser les performances de mes applications j'ai été amené à mettre en place divers algorithmes et méthodes d'optimisation. J'ai notamment utilisé le multithreading pour optimiser des communications sur des programmes client-serveur en C.",
-		url: "",
+		url: "preuve-multithreading.png",
 	},
 	{
 		name: "AC 3 – Comprendre les enjeux et moyens de sécurisation des données et du code",
 		content:
 			"Lors de la SAE concernant la création d'applications d'enchères, j'ai dû examiner les failles de sécurité potentielles dans notre appliation. Cela m'a permis de prendre conscience des nombreuses faiblesses des systèmes informatiques. J'ai ensuite pu mettre en place un système de signature RSA pour afin de rendre les communication plus sûres.",
-		url: "",
+		url: "preuve-signature.png",
 	},
 	{
 		name: "CE – Recenser les algorithmes et les structures de données usuels + CE – Justifier les choix et validant les résultats",
