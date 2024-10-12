@@ -19,23 +19,11 @@ export const linksItems: item[] = [
 	{ textContent: "contact", url: "/contact" }
 ];
 
-export function enableScroll() {
-
-}
-
-export function disableScroll() {
-
-}
-
 export const Navbar: React.FC = () => {
 	const [display, setDisplay] = useState<boolean>(false);
 	const blurDisplay = display ? "block" : "none";
-	if (display) {
-		disableScroll();
-	} else {
-		enableScroll();
-	}
-	return (
+	
+  return (
 		<header id="header">
 			<div
 				className="blur-overlay"

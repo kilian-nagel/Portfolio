@@ -10,6 +10,7 @@ import "../public/styles/reset.css";
 import "../public/styles/utility.css";
 import "../public/styles/style.css";
 import "../public/styles/variables.css";
+import "../public/styles/output.css";
 
 export default function RootLayout({
     children

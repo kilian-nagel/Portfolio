@@ -6,7 +6,7 @@ interface props {
 
 export const SkillContainer: React.FC<props> = ({ index, title, text }) => {
 	return (
-		<div className="container">
+		<div className="max-w-[540px] min-w-[350px] w-[100%] flex-1 rounded-lg bg-gray relative">
 			<p
 				style={{
 					marginBottom: ".25rem",

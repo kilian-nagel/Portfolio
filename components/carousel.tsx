@@ -6,15 +6,6 @@ import { fetcher } from '../data/fetch';
 import { getShortProjectQuery } from '../data/queries';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
-// function setupControlHorizontalScroll(container, button, distance) {
-//   button.addEventListener("click", () => {
-//     container.scrollTo({
-//       left: container.scrollLeft + distance,
-//       behavior: "smooth",
-//     });
-//   });
-// }
-
 export const Carousel: React.FC = () => {
     // On récupére les différents projets dans un format court.
     const { data, isLoading, error } = useSWR<
@@ -76,10 +67,8 @@ export const Carousel: React.FC = () => {
         </div>
     ));
 
-    console.log(data);
-
     if (isLoading) {
-        return <div className="content">{repeatedElements}</div>;
+        return <div className="flex relative gap-4 overflow-y-hidden overflow-x-scroll pb-4">{repeatedElements}</div>;
     }
 
     if (
@@ -93,7 +82,7 @@ export const Carousel: React.FC = () => {
 
     return (
         <>
-            <div className="content">
+            <div className="flex relative gap-4 overflow-y-hidden overflow-x-scroll pb-4">
                 {data.data.posts.map((d) => (
                     <ProjectCard
                         key={Math.random()}

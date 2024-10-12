@@ -25,11 +25,8 @@ export const fetcher = async <T extends Iresponse>(
         }
 
         const data = await res.json();
-        console.log("data");
-        console.log(data);
         return data;
     } catch (error) {
-        console.error('Fetch error:', error);
         throw error; // Re-throw the error for useSWR to handle
     }
 };

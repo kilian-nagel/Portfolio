@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .badge {
+      @apply bg-gray-muted font-normal rounded-lg inline-block text-white px-4 py-1
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply mx-4 md:mx-8 lg:mx-14;
+  }
+}
+
+

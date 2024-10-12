@@ -3,3 +3,4 @@ mixins.css
 node_modules/
 .next/
 .env*
+*yaml

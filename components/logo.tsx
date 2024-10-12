@@ -9,7 +9,7 @@ export const Logo: React.FC<props> = ({ theme }) => {
     return (
         <Link href="/">
             <span
-                className="fs-200 bold-900"
+                className="fs-200 font-black"
                 style={{ color: theme === Theme.DARK ? 'black' : 'white' }}
             >
                 KN
