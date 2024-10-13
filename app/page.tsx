@@ -109,15 +109,15 @@ export default function Page() {
 	return (
 		<>
 			<main>
-				<section className="flex items-end justify-between relative gap-15 p-10 pb-20" id="home">
+				<section className="section-padding flex items-end justify-between relative gap-15 pb-20" id="home">
 					<div className="content w-full flex pt-20 justify-between">
 						<div className="left">
 							<div>
-                <span className="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray text-blue-800">
+                <span className="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray text-blue-800 mb-2 md:mb-none">
                   <span className="size-1.5 inline-block rounded-full bg-[#FFFFFF]"></span>
                   En cours de 3ème année de BUT informatique.
                 </span>
-								<h1 ref={text_ref} className="title fs-900 bold-900">
+								<h1 ref={text_ref} className="title fs-900 bold-900 leading-tight">
 									Kilian Nagel
 								</h1>
 							</div>
@@ -160,7 +160,10 @@ export default function Page() {
 								</div>
 							</div>
 						</div>
-						<div className="flex flex-col justify-center rounded-md py-4 px-2 gap-8 text-center backdrop-blur-lg" style={{background:"rgba(20,20,20,0.4)"}}>
+
+
+
+						<div className="hidden lg:flex flex-col justify-center rounded-md py-4 px-2 gap-8 text-center backdrop-blur-lg" style={{background:"rgba(20,20,20,0.4)"}}>
 							<div className="container min-w-[200px] flex flex-col gap-1 justify-end">
 								<div className="number fs-600 bold-900">05</div>
 								<p className="text">Applications réalisées</p>
