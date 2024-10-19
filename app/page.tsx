@@ -196,7 +196,7 @@ export default function Page() {
 					</div>
 				</section>
 
-				<section className="section-padding p-7 my-20 rounded-lg overflow-hidden md:bg-none" style={{background:"url('/media/oak-forest.jpg') center center/cover"}}>
+				<section className="hidden lg:block section-padding p-7 my-20 rounded-lg overflow-hidden md:bg-none" style={{background:"url('/media/oak-forest.jpg') center center/cover"}}>
           <h2 className="title block sm:hidden text-5xl font-black pt-4 pb-8 text-[#FFFFFF]">
             Biographie
           </h2>
@@ -253,7 +253,37 @@ export default function Page() {
           </div>
 				</section>
 
-				<section className="section-padding py-4" id="projects">
+
+				<section className="block lg:hidden section-padding my-20 rounded-lg overflow-hidden md:bg-none">
+          <div className="bg-[#131313] rounded-lg px-6 p-8 pb-20 z-10">
+            <h2
+              className="title text-4xl md:text-5xl font-black pt-4 pb-8 text-[#FFFFFF]">
+              Biographie
+            </h2>
+            <div className="content text-[#FFFFFF]">
+              J’ai commencé mon parcours dans l’informatique
+              en 3ème lorsque j’ai programmé mes premières
+              lignes de code en HTML/CSS.
+              J’ai tout de suite accroché et depuis j’ai
+              continuellement cherché à m’améliorer et à
+              apprendre de nouvelles compétences dans le web
+              et ses domaines transversaux (webdesign,
+              réseau…).<br/><br/>
+              Tout ceci, en passant par les différents types
+              de site web (statiques, dynamiques et réactifs).
+              Aujourd'hui, je suis en 2nd année de de BUT
+              informatique (Bachelor Universitaire de
+              Technologie).
+              Chaque jour, ma formation et mes projets
+              personnels nourrissent ma curiosité et me
+              rapprochent progressivement de mon projet
+              professionnel : devenir développeur web
+              frontend.
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding py-4" id="projects">
 					<div className="flex justify-between items-end pt-6">
 						<h2 className="subtitle fs-700 bold-900">
 							Réalisations
@@ -278,8 +308,8 @@ export default function Page() {
 				<section className="section-padding pb-6" id="technologies">
 					<div className="content pt-14 pb-2">
 						<h2 className="fs-700 bold-900">Technologies</h2>
-            <div className="flex gap-4">
-              <div className="technologies bg-gray rounded-lg p-6">
+            <div className="flex gap-4 flex-col xl:flex-row">
+              <div className="technologies bg-gray rounded-lg p-6 flex-1">
                 {technologies.map((tech, i) => (
                   <div>
                     <TechnologyContainer
@@ -300,42 +330,48 @@ export default function Page() {
                   </div>
                 ))}
               </div>
-              <div className="w-[110px] rounded-lg p-2" style={{backgroundImage:"url('/media/bg-blue-asbtract.jpg')"}}>
-                <div style={{backdropFilter: "blur(6px)", background:"rgba(20,20,20,0.4)"}} class="p-4 h-full w-full flex flex-col justify-between items-center rounded-lg">
-                  <Image
-                      className="rotate-90 animate-out-and-in"
-                      width={50}
-                      height={50}
-                      src="/media/icones/arrow-diagonal.svg"
-                      alt="flèche"
-                    />
-                  <p class="font-black text-3xl" style={{writingMode:'vertical-rl'}}>on going.</p>
-                </div>
-              </div>
-              <div className="bg-[#0c8ce9] p-4 py-5 rounded-lg min-w-[400px] flex flex-col justify-between items-between">
-                <p className="text-3xl font-black">En cours<br/><span className="text-[#CDCDCD]">d'apprentissage.</span></p>
-                <div className="flex flex-col justify-end gap-4 mt-8">
-                  <div className="bg-[#269ef4] p-3 rounded-lg flex-1">
-                    <p className="text-lg font-black">Rust</p>
-                    <p>Ownership, type borrowing.</p>
-                  </div>
-                  <div className="bg-[#269ef4] p-3 rounded-lg flex-1">
-                    <p className="text-lg font-black">MQ</p>
-                    <p>Channels, dispatchers.</p>
-                  </div>
-                  <div className="bg-[#269ef4] p-3 rounded-lg flex-1">
-                    <p className="text-lg font-black">Optimisations V8</p>
-                    <p>GC, Contextes d'execution</p>
+
+              <div className="flex gap-4">
+                <div className="w-[110px] rounded-lg p-2 hidden md:block" style={{backgroundImage:"url('/media/bg-blue-asbtract.jpg')"}}>
+                  <div style={{backdropFilter: "blur(6px)", background:"rgba(20,20,20,0.4)"}} class="p-4 h-full w-full flex flex-col justify-between items-center rounded-lg">
+                    <Image
+                        className="rotate-90 animate-out-and-in"
+                        width={50}
+                        height={50}
+                        src="/media/icones/arrow-diagonal.svg"
+                        alt="flèche"
+                      />
+                    <p class="font-black text-3xl" style={{writingMode:'vertical-rl'}}>on going.</p>
                   </div>
                 </div>
+
+                <div className="bg-[#0c8ce9] p-4 py-5 rounded-lg min-w-[400px] flex flex-col flex-1 justify-between items-between">
+                  <p className="text-3xl font-black">En cours<br/><span className="text-[#CDCDCD]">d'apprentissage.</span></p>
+                  <div className="flex flex-col justify-end gap-4 mt-8">
+                    <div className="bg-[#269ef4] p-3 rounded-lg flex-1">
+                      <p className="text-lg font-black">Rust</p>
+                      <p>Ownership, type borrowing.</p>
+                    </div>
+                    <div className="bg-[#269ef4] p-3 rounded-lg flex-1">
+                      <p className="text-lg font-black">MQ</p>
+                      <p>Channels, dispatchers.</p>
+                    </div>
+                    <div className="bg-[#269ef4] p-3 rounded-lg flex-1">
+                      <p className="text-lg font-black">Optimisations V8</p>
+                      <p>GC, Contextes d'execution</p>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+
             </div>
 
 					</div>
 				</section>
 
-				<section className="pb-2 mt-14 section-padding flex lg:flex-column lg:flex-row gap-4 md:gap-8 lg:gap-14" id="parcours">
-					<div className="flex p-8 bg-gray lg:min-h-[450px] gap-2 justify-between flex-column lg:min-w-[400px] rounded-lg">
+				<section className="pb-2 mt-14 section-padding flex flex-col lg:flex-column lg:flex-row gap-4 md:gap-8 lg:gap-14 flex-1" id="parcours">
+					<div className="flex p-8 bg-gray lg:min-h-[450px] gap-14 justify-between flex-column lg:min-w-[400px] rounded-lg">
             <div>
               <h2
                 className="fs-700 bold-900 mt-2 mb-0 pb-0">
@@ -356,7 +392,7 @@ export default function Page() {
             </div>
           </div>
           
-					<div className="content flex flex-1 flex-column" style={{ maxWidth: "900px" }}>
+					<div className="content flex flex-1 flex-column max-w-[900px]">
 						{parcours.map((p,i) => (
 							<div>
               <ParcoursContainer
