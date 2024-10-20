@@ -1,25 +1,25 @@
 "use client";
-import { Badge } from "../../../components/generic/badge";
+import { Badge } from "@/components/generic/badge";
 import {
 	ILongProject,
 	ILongProjectsApiResponse,
-} from "../../../components/interfaces/project";
+} from "@/components/interfaces/project";
 import { getLongProjectQuery } from "../../../data/queries";
 import { fetcher } from "../../../data/fetch";
 import useSWR from "swr";
-import { Category } from "../../../components/projectPage/category";
+import { Category } from "@/components/projectPage/category";
 import Skeleton from "react-loading-skeleton";
-import { RoundBadge } from "../../../components/roundBadge";
+import { RoundBadge } from "@/components/roundBadge";
 
-import "../../../public/styles/footer.css";
-import "../../../public/styles/navbar.css";
-import "../../../public/styles/normalize.css";
-import "../../../public/styles/project-1.css";
-import "../../../public/styles/projet-professionnel.css";
-import "../../../public/styles/reset.css";
-import "../../../public/styles/utility.css";
-import "../../../public/styles/style.css";
-import "../../../public/styles/variables.css";
+import "@/styles/footer.css";
+import "@/styles/navbar.css";
+import "@/styles/normalize.css";
+import "@/styles/project-1.css";
+import "@/styles/projet-professionnel.css";
+import "@/styles/reset.css";
+import "@/styles/utility.css";
+import "@/styles/style.css";
+import "@/styles/variables.css";
 
 function extractH2Elements(htmlString: string): string {
 	const parser = new DOMParser();

@@ -24,7 +24,7 @@ export const Navbar: React.FC = () => {
 	const blurDisplay = display ? "block" : "none";
 	
   return (
-		<header id="header">
+		<header className="mt-4 py-[var(--spacing-md)] rounded-[12px] mx-auto max-w-[1500px] z-10 section-padding" id="header">
 			<div
 				className="blur-overlay"
 				style={{

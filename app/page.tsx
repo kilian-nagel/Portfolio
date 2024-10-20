@@ -109,7 +109,7 @@ export default function Page() {
 	return (
 		<>
 			<main>
-				<section className="section-padding flex items-end justify-between relative gap-15 pb-20" id="home">
+				<section className="section-margin flex items-end justify-between relative gap-15 pb-20" id="home">
 					<div className="content w-full flex pt-20 justify-between">
 						<div className="left">
 							<div>
@@ -117,13 +117,13 @@ export default function Page() {
                   <span className="size-1.5 inline-block rounded-full bg-[#FFFFFF]"></span>
                   En cours de 3ème année de BUT informatique.
                 </span>
-								<h1 ref={text_ref} className="title fs-900 bold-900 leading-tight">
+								<h1 ref={text_ref} className="title-2x leading-tight">
 									Kilian Nagel
 								</h1>
 							</div>
 							<div
 								className="pb-2 mb-4">
-								<p className="text fs-200 max-w-[720px]">
+								<p className="text max-w-[720px]">
 									Je suis un étudiant en informatique basé en
 									France. J'ai beaucoup d'attrait pour le
 									webdesign et les technologies du web. Depuis
@@ -166,17 +166,17 @@ export default function Page() {
 						<div className="hidden lg:flex flex-col justify-center rounded-md py-4 px-2 gap-8 text-center backdrop-blur-lg" style={{background:"rgba(20,20,20,0.4)"}}>
 							<div className="container min-w-[200px] flex flex-col gap-1 justify-end">
 								<div className="number fs-600 bold-900">05</div>
-								<p className="text">Applications réalisées</p>
+								<p className="text-sm">Applications réalisées</p>
 							</div>
 							<div className="container min-w-[200px] flex flex-col gap-1 justify-end">
 								<div className="number fs-600 bold-900">15</div>
-								<p className="text">
+								<p className="text-sm">
 									Sites statiques réalisées
 								</p>
 							</div>
 							<div className="container min-w-[200px] flex flex-col gap-1 justify-end">
 								<div className="number fs-600 bold-900">04</div>
-								<p className="text">Projets en groupe</p>
+								<p className="text-sm">Projets en groupe</p>
 							</div>
 						</div>
 						<Image
@@ -196,11 +196,11 @@ export default function Page() {
 					</div>
 				</section>
 
-				<section className="hidden lg:block section-padding p-7 my-20 rounded-lg overflow-hidden md:bg-none" style={{background:"url('/media/oak-forest.jpg') center center/cover"}}>
-          <h2 className="title block sm:hidden text-5xl font-black pt-4 pb-8 text-[#FFFFFF]">
+				<section className="hidden lg:block section-margin p-7 my-20 rounded-lg overflow-hidden md:bg-none" style={{background:"url('/media/oak-forest.jpg') center center/cover"}}>
+          <h2 className="title block sm:hidden pt-4 pb-8 text-[#FFFFFF]">
             Biographie
           </h2>
-          <div className="rounded-lg hidden lg:inline-block p-3 pr-16 bg-[#131313]">
+          <div className="rounded-lg text hidden lg:inline-block p-3 pr-16 bg-[#131313]">
             Explore projects
           </div>
           <div className="flex items-end justify-between mt-7">
@@ -226,10 +226,10 @@ export default function Page() {
             </div>
             <div className="bg-[#131313] rounded-lg px-12 p-8 pb-20 max-w-[560px] z-10">
               <h2
-                className="title text-5xl font-black pt-4 pb-8 text-[#FFFFFF]">
+                className="title pt-4 pb-8 text-[#FFFFFF]">
                 Biographie
               </h2>
-              <div className="content text-[#FFFFFF]">
+              <div className="text text-[#FFFFFF]">
                 J’ai commencé mon parcours dans l’informatique
                 en 3ème lorsque j’ai programmé mes premières
                 lignes de code en HTML/CSS.
@@ -254,13 +254,13 @@ export default function Page() {
 				</section>
 
 
-				<section className="block lg:hidden section-padding my-20 rounded-lg overflow-hidden md:bg-none">
+				<section className="block lg:hidden section-margin my-20 rounded-lg overflow-hidden md:bg-none">
           <div className="bg-[#131313] rounded-lg px-6 p-8 pb-20 z-10">
             <h2
               className="title text-4xl md:text-5xl font-black pt-4 pb-8 text-[#FFFFFF]">
               Biographie
             </h2>
-            <div className="content text-[#FFFFFF]">
+            <div className="text text-[#FFFFFF]">
               J’ai commencé mon parcours dans l’informatique
               en 3ème lorsque j’ai programmé mes premières
               lignes de code en HTML/CSS.
@@ -283,7 +283,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="section-padding py-4" id="projects">
+        <section className="section-margin py-4" id="projects">
 					<div className="flex justify-between items-end pt-6">
 						<h2 className="subtitle fs-700 bold-900">
 							Réalisations
@@ -300,12 +300,12 @@ export default function Page() {
 					<Carousel />
 				</section>
 
-				<section className="section-padding pb-6 items-stretch" id="skills">
+				<section className="section-margin pb-6 items-stretch" id="skills">
 					<h2 className="subtitle fs-700 font-black pt-12">Compétences</h2>
           <SkillSection skills={developmentSkills}></SkillSection>
 				</section>
 
-				<section className="section-padding pb-6" id="technologies">
+				<section className="section-margin pb-6" id="technologies">
 					<div className="content pt-14 pb-2">
 						<h2 className="fs-700 bold-900">Technologies</h2>
             <div className="flex gap-4 flex-col xl:flex-row">
@@ -370,11 +370,11 @@ export default function Page() {
 					</div>
 				</section>
 
-				<section className="pb-2 mt-14 section-padding flex flex-col lg:flex-column lg:flex-row gap-4 md:gap-8 lg:gap-14 flex-1" id="parcours">
+				<section className="pb-2 mt-14 section-margin flex flex-col lg:flex-column lg:flex-row gap-4 md:gap-8 lg:gap-14 flex-1" id="parcours">
 					<div className="flex p-8 bg-gray lg:min-h-[450px] gap-14 justify-between flex-column lg:min-w-[400px] rounded-lg">
             <div>
               <h2
-                className="fs-700 bold-900 mt-2 mb-0 pb-0">
+                className="title mt-2 mb-2 pb-0">
                 Parcours
               </h2>   
               <p class="text">Découvrez mon parcours scolaire.</p>
@@ -382,7 +382,7 @@ export default function Page() {
             <div className="flex lg:justify-between justify-end items-end">
                <p className="rotate-180 text-xs hidden lg:block" style={{ writingMode: 'vertical-rl' }}>educationnal background</p>
                <div className="bg-[#0C8CE9] rounded-full p-2 rotate-180 lg:rotate-0">
-                <Image
+                <Image className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
                       width={50}
                       height={50}
                       src="/media/icones/arrow-diagonal.svg"
