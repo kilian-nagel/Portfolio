@@ -8,9 +8,9 @@ interface props {
 
 export const ParcoursContainer:React.FC<props> = ({title,text,info,index})=>{
     return (
-        <div className="flex w-[100%] gap-8 lg:gap-14 items-center py-2">
+        <div className="flex w-[100%] lg:gap-8 lg:gap-14 items-center py-2">
             <div class="flex">
-               <p className="text-3xl bold-700">0{index}</p>
+               <p className="text-3xl bold-700 hidden lg:block">0{index}</p>
             </div>
             <div> 
                <p>{text}</p>

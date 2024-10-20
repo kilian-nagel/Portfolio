@@ -49,7 +49,8 @@ module.exports = {
       'lg': {'min': '1023px'},
       'md': {'min': '767px'},
       'sm': {'min': '639px'},
-      '900px': {'min':'900px'}
+      '900px': {'min':'900px'},
+      '1150px':{'min':'1150px'}
     }
   },
   plugins: [],

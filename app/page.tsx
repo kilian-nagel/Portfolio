@@ -109,21 +109,21 @@ export default function Page() {
 	return (
 		<>
 			<main>
-				<section className="flex items-end justify-between relative gap-15 p-10 pb-20" id="home">
+				<section className="section-margin flex items-end justify-between relative gap-15 pb-20" id="home">
 					<div className="content w-full flex pt-20 justify-between">
 						<div className="left">
 							<div>
-                <span className="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray text-blue-800">
+                <span className="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray text-blue-800 mb-2 md:mb-none">
                   <span className="size-1.5 inline-block rounded-full bg-[#FFFFFF]"></span>
                   En cours de 3ème année de BUT informatique.
                 </span>
-								<h1 ref={text_ref} className="title fs-900 bold-900">
+								<h1 ref={text_ref} className="title-2x leading-tight">
 									Kilian Nagel
 								</h1>
 							</div>
 							<div
 								className="pb-2 mb-4">
-								<p className="text fs-200 max-w-[720px]">
+								<p className="text max-w-[720px]">
 									Je suis un étudiant en informatique basé en
 									France. J'ai beaucoup d'attrait pour le
 									webdesign et les technologies du web. Depuis
@@ -160,20 +160,23 @@ export default function Page() {
 								</div>
 							</div>
 						</div>
-						<div className="flex flex-col justify-center rounded-md py-4 px-2 gap-8 text-center backdrop-blur-lg" style={{background:"rgba(20,20,20,0.4)"}}>
+
+
+
+						<div className="hidden lg:flex flex-col justify-center rounded-md py-4 px-2 gap-8 text-center backdrop-blur-lg" style={{background:"rgba(20,20,20,0.4)"}}>
 							<div className="container min-w-[200px] flex flex-col gap-1 justify-end">
 								<div className="number fs-600 bold-900">05</div>
-								<p className="text">Applications réalisées</p>
+								<p className="text-sm">Applications réalisées</p>
 							</div>
 							<div className="container min-w-[200px] flex flex-col gap-1 justify-end">
 								<div className="number fs-600 bold-900">15</div>
-								<p className="text">
+								<p className="text-sm">
 									Sites statiques réalisées
 								</p>
 							</div>
 							<div className="container min-w-[200px] flex flex-col gap-1 justify-end">
 								<div className="number fs-600 bold-900">04</div>
-								<p className="text">Projets en groupe</p>
+								<p className="text-sm">Projets en groupe</p>
 							</div>
 						</div>
 						<Image
@@ -193,11 +196,11 @@ export default function Page() {
 					</div>
 				</section>
 
-				<section className="section-padding p-7 my-20 rounded-lg overflow-hidden md:bg-none" style={{background:"url('/media/oak-forest.jpg') center center/cover"}}>
-          <h2 className="title block sm:hidden text-5xl font-black pt-4 pb-8 text-[#FFFFFF]">
+				<section className="hidden lg:block section-margin p-7 my-20 rounded-lg overflow-hidden md:bg-none" style={{background:"url('/media/oak-forest.jpg') center center/cover"}}>
+          <h2 className="title block sm:hidden pt-4 pb-8 text-[#FFFFFF]">
             Biographie
           </h2>
-          <div className="rounded-lg hidden lg:inline-block p-3 pr-16 bg-[#131313]">
+          <div className="rounded-lg text hidden lg:inline-block p-3 pr-16 bg-[#131313]">
             Explore projects
           </div>
           <div className="flex items-end justify-between mt-7">
@@ -223,10 +226,10 @@ export default function Page() {
             </div>
             <div className="bg-[#131313] rounded-lg px-12 p-8 pb-20 max-w-[560px] z-10">
               <h2
-                className="title text-5xl font-black pt-4 pb-8 text-[#FFFFFF]">
+                className="title pt-4 pb-8 text-[#FFFFFF]">
                 Biographie
               </h2>
-              <div className="content text-[#FFFFFF]">
+              <div className="text text-[#FFFFFF]">
                 J’ai commencé mon parcours dans l’informatique
                 en 3ème lorsque j’ai programmé mes premières
                 lignes de code en HTML/CSS.
@@ -250,7 +253,37 @@ export default function Page() {
           </div>
 				</section>
 
-				<section className="section-padding py-4" id="projects">
+
+				<section className="block lg:hidden section-margin my-20 rounded-lg overflow-hidden md:bg-none">
+          <div className="bg-[#131313] rounded-lg px-6 p-8 pb-20 z-10">
+            <h2
+              className="title text-4xl md:text-5xl font-black pt-4 pb-8 text-[#FFFFFF]">
+              Biographie
+            </h2>
+            <div className="text text-[#FFFFFF]">
+              J’ai commencé mon parcours dans l’informatique
+              en 3ème lorsque j’ai programmé mes premières
+              lignes de code en HTML/CSS.
+              J’ai tout de suite accroché et depuis j’ai
+              continuellement cherché à m’améliorer et à
+              apprendre de nouvelles compétences dans le web
+              et ses domaines transversaux (webdesign,
+              réseau…).<br/><br/>
+              Tout ceci, en passant par les différents types
+              de site web (statiques, dynamiques et réactifs).
+              Aujourd'hui, je suis en 2nd année de de BUT
+              informatique (Bachelor Universitaire de
+              Technologie).
+              Chaque jour, ma formation et mes projets
+              personnels nourrissent ma curiosité et me
+              rapprochent progressivement de mon projet
+              professionnel : devenir développeur web
+              frontend.
+            </div>
+          </div>
+        </section>
+
+        <section className="section-margin py-4" id="projects">
 					<div className="flex justify-between items-end pt-6">
 						<h2 className="subtitle fs-700 bold-900">
 							Réalisations
@@ -267,16 +300,16 @@ export default function Page() {
 					<Carousel />
 				</section>
 
-				<section className="section-padding pb-6 items-stretch" id="skills">
+				<section className="section-margin pb-6 items-stretch" id="skills">
 					<h2 className="subtitle fs-700 font-black pt-12">Compétences</h2>
           <SkillSection skills={developmentSkills}></SkillSection>
 				</section>
 
-				<section className="section-padding pb-6" id="technologies">
+				<section className="section-margin pb-6" id="technologies">
 					<div className="content pt-14 pb-2">
 						<h2 className="fs-700 bold-900">Technologies</h2>
-            <div className="flex gap-4">
-              <div className="technologies bg-gray rounded-lg p-6">
+            <div className="flex gap-4 flex-col xl:flex-row">
+              <div className="technologies bg-gray rounded-lg p-6 flex-1">
                 {technologies.map((tech, i) => (
                   <div>
                     <TechnologyContainer
@@ -297,45 +330,51 @@ export default function Page() {
                   </div>
                 ))}
               </div>
-              <div className="w-[110px] rounded-lg p-2" style={{backgroundImage:"url('/media/bg-blue-asbtract.jpg')"}}>
-                <div style={{backdropFilter: "blur(6px)", background:"rgba(20,20,20,0.4)"}} class="p-4 h-full w-full flex flex-col justify-between items-center rounded-lg">
-                  <Image
-                      className="rotate-90 animate-out-and-in"
-                      width={50}
-                      height={50}
-                      src="/media/icones/arrow-diagonal.svg"
-                      alt="flèche"
-                    />
-                  <p class="font-black text-3xl" style={{writingMode:'vertical-rl'}}>on going.</p>
-                </div>
-              </div>
-              <div className="bg-[#0c8ce9] p-4 py-5 rounded-lg min-w-[400px] flex flex-col justify-between items-between">
-                <p className="text-3xl font-black">En cours<br/><span className="text-[#CDCDCD]">d'apprentissage.</span></p>
-                <div className="flex flex-col justify-end gap-4 mt-8">
-                  <div className="bg-[#269ef4] p-3 rounded-lg flex-1">
-                    <p className="text-lg font-black">Rust</p>
-                    <p>Ownership, type borrowing.</p>
-                  </div>
-                  <div className="bg-[#269ef4] p-3 rounded-lg flex-1">
-                    <p className="text-lg font-black">MQ</p>
-                    <p>Channels, dispatchers.</p>
-                  </div>
-                  <div className="bg-[#269ef4] p-3 rounded-lg flex-1">
-                    <p className="text-lg font-black">Optimisations V8</p>
-                    <p>GC, Contextes d'execution</p>
+
+              <div className="flex gap-4">
+                <div className="w-[110px] rounded-lg p-2 hidden md:block" style={{backgroundImage:"url('/media/bg-blue-asbtract.jpg')"}}>
+                  <div style={{backdropFilter: "blur(6px)", background:"rgba(20,20,20,0.4)"}} class="p-4 h-full w-full flex flex-col justify-between items-center rounded-lg">
+                    <Image
+                        className="rotate-90 animate-out-and-in"
+                        width={50}
+                        height={50}
+                        src="/media/icones/arrow-diagonal.svg"
+                        alt="flèche"
+                      />
+                    <p class="font-black text-3xl" style={{writingMode:'vertical-rl'}}>on going.</p>
                   </div>
                 </div>
+
+                <div className="bg-[#0c8ce9] p-4 py-5 rounded-lg min-w-[400px] flex flex-col flex-1 justify-between items-between">
+                  <p className="text-3xl font-black">En cours<br/><span className="text-[#CDCDCD]">d'apprentissage.</span></p>
+                  <div className="flex flex-col justify-end gap-4 mt-8">
+                    <div className="bg-[#269ef4] p-3 rounded-lg flex-1">
+                      <p className="text-lg font-black">Rust</p>
+                      <p>Ownership, type borrowing.</p>
+                    </div>
+                    <div className="bg-[#269ef4] p-3 rounded-lg flex-1">
+                      <p className="text-lg font-black">MQ</p>
+                      <p>Channels, dispatchers.</p>
+                    </div>
+                    <div className="bg-[#269ef4] p-3 rounded-lg flex-1">
+                      <p className="text-lg font-black">Optimisations V8</p>
+                      <p>GC, Contextes d'execution</p>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+
             </div>
 
 					</div>
 				</section>
 
-				<section className="pb-2 mt-14 section-padding flex lg:flex-column lg:flex-row gap-4 md:gap-8 lg:gap-14" id="parcours">
-					<div className="flex p-8 bg-gray lg:min-h-[450px] gap-2 justify-between flex-column lg:min-w-[400px] rounded-lg">
+				<section className="pb-2 mt-14 section-margin flex flex-col lg:flex-column lg:flex-row gap-4 md:gap-8 lg:gap-14 flex-1" id="parcours">
+					<div className="flex p-8 bg-gray lg:min-h-[450px] gap-14 justify-between flex-column lg:min-w-[400px] rounded-lg">
             <div>
               <h2
-                className="fs-700 bold-900 mt-2 mb-0 pb-0">
+                className="title mt-2 mb-2 pb-0">
                 Parcours
               </h2>   
               <p class="text">Découvrez mon parcours scolaire.</p>
@@ -343,7 +382,7 @@ export default function Page() {
             <div className="flex lg:justify-between justify-end items-end">
                <p className="rotate-180 text-xs hidden lg:block" style={{ writingMode: 'vertical-rl' }}>educationnal background</p>
                <div className="bg-[#0C8CE9] rounded-full p-2 rotate-180 lg:rotate-0">
-                <Image
+                <Image className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
                       width={50}
                       height={50}
                       src="/media/icones/arrow-diagonal.svg"
@@ -353,7 +392,7 @@ export default function Page() {
             </div>
           </div>
           
-					<div className="content flex flex-1 flex-column" style={{ maxWidth: "900px" }}>
+					<div className="content flex flex-1 flex-column max-w-[900px]">
 						{parcours.map((p,i) => (
 							<div>
               <ParcoursContainer
