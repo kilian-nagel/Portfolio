@@ -19,5 +19,5 @@ export const NavItems: React.FC<props> = ({ items }) => {
             url={item.url}
         />
     ));
-    return <ul className="nav-items">{listItems}</ul>;
+    return <ul className="nav-items flex items-center">{listItems}</ul>;
 };

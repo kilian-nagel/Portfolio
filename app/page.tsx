@@ -154,7 +154,7 @@ export default function Page() {
 										style={{ height: 16 }}
 										alt="icone contact"
 									/>
-									<a className="text fs-200" href="/CV.pdf" download={"CV"}>
+									<a className="text fs-200" href="/media/CV.pdf" download={"CV"}>
 										Télécharger CV
 									</a>
 								</div>
@@ -333,7 +333,7 @@ export default function Page() {
 
               <div className="flex gap-4">
                 <div className="w-[110px] rounded-lg p-2 hidden md:block" style={{backgroundImage:"url('/media/bg-blue-asbtract.jpg')"}}>
-                  <div style={{backdropFilter: "blur(6px)", background:"rgba(20,20,20,0.4)"}} class="p-4 h-full w-full flex flex-col justify-between items-center rounded-lg">
+                  <div style={{backdropFilter: "blur(6px)", background:"rgba(20,20,20,0.4)"}} className="p-4 h-full w-full flex flex-col justify-between items-center rounded-lg">
                     <Image
                         className="rotate-90 animate-out-and-in"
                         width={50}
@@ -341,7 +341,7 @@ export default function Page() {
                         src="/media/icones/arrow-diagonal.svg"
                         alt="flèche"
                       />
-                    <p class="font-black text-3xl" style={{writingMode:'vertical-rl'}}>on going.</p>
+                    <p className="font-black text-3xl" style={{writingMode:'vertical-rl'}}>on going.</p>
                   </div>
                 </div>
 
@@ -377,7 +377,7 @@ export default function Page() {
                 className="title mt-2 mb-2 pb-0">
                 Parcours
               </h2>   
-              <p class="text">Découvrez mon parcours scolaire.</p>
+              <p className="text">Découvrez mon parcours scolaire.</p>
             </div>
             <div className="flex lg:justify-between justify-end items-end">
                <p className="rotate-180 text-xs hidden lg:block" style={{ writingMode: 'vertical-rl' }}>educationnal background</p>
