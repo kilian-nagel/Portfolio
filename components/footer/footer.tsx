@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FooterSection } from "./footer/footerSections";
+import { FooterSection } from "@/components/footer/footerSections";
 
 const footerLinks = [
 	{
@@ -46,8 +46,8 @@ const footerLinks = [
 
 export const Footer: React.FC = () => {
 	return (
-		<footer id="footer" style={{ marginTop: "6rem" }}>
-			<div className="content">
+		<footer id="footer" className="mt-20">
+			<div className="section-padding py-[var(--spacing-xl)] py-0 flex justify-between flex-wrap gap-8 items-start max-w-[1500px] mx-auto">
 				<div>
 					<div className="heading">
 						<h3 className="fs-800">
