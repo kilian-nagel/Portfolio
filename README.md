@@ -16,6 +16,8 @@ Voici l'ensemble des outils et technos employées :
 - ReactJS.
 - NextJS.
 - Hygraph (CMS Headless) pour le contenu des projets.
+- Typescript
+- Tailwindcss
 
 # Apprentissages
 
