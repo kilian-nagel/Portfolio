@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { FooterSection } from "@/components/footer/footerSections";
+"use client";
+import React, { useEffect } from "react";
 
 const footerLinks = [
 	{
@@ -28,7 +28,7 @@ const footerLinks = [
 			{
 				text: "Biographie",
 				url: "/#biographie",
-				ariaText: "se rendre sur la parrtie biographie",
+				ariaText: "se rendre sur la partie biographie",
 			},
 			{
 				text: "Projets",
@@ -45,35 +45,55 @@ const footerLinks = [
 ];
 
 export const Footer: React.FC = () => {
+    useEffect(() => {
+        const updateTime = () => {
+          const now = new Date();
+          const hours = String(now.getHours()).padStart(2, "0");
+          const minutes = String(now.getMinutes()).padStart(2, "0");
+
+          let hour_element = document.getElementById("time");
+          if(hour_element){
+            hour_element.innerText = `${hours}:${minutes}`
+          }
+        };
+
+        // Initial call to set the time immediately
+        updateTime();
+
+        // Update the time every 5 seconds
+        const interval = setInterval(updateTime, 5000);
+
+        // Cleanup interval on unmount
+        return () => clearInterval(interval);
+    }, []);
+
 	return (
-		<footer id="footer" className="mt-20">
-			<div className="section-padding py-[var(--spacing-xl)] py-0 flex justify-between flex-wrap gap-8 items-start max-w-[1500px] mx-auto">
-				<div>
-					<div className="heading">
-						<h3 className="fs-800">
-							Kilian
-							<br />
-							Nagel
-						</h3>
-					</div>
-					<div className="links-section">
-						{footerLinks.map((section) => (
-							<FooterSection
-								key={Math.random()}
-								title={section.sectionTitle}
-								links={section.links}
-							/>
-						))}
-					</div>
-					<div className="copyright-section">
-						Copyright © 2024 Nagel Kilian.
-					</div>
-				</div>
-                <div className="cta-container" style={{position:"relative",paddingBottom:"2rem"}}>
-                    <h3 className="fs-500" style={{color:"white",paddingBottom:"1rem"}}>Vous êtes convaincus ?</h3>
-                    <Link href={"mailto:nagelkilian05@gmail.com"} style={{fontSize:20,fontWeight:700,background:"rgba(255,255,255,0.1)",padding:".5rem 1rem",borderRadius:"8px"}}>contactez-moi</Link>
-                </div>
-			</div>
+		<footer className="mt-20 border-none">
+            <div className="bg-cover bg-center"> 
+                  <main className="py-10 section-padding flex justify-between items-end">
+                    <div>
+                                <h3 className="text-6xl font-black pb-4">Collaborons <br/>ensemble pour un projet.</h3>
+
+                        <div className="flex items-center gap-5"> 
+                            <ul style={{ listStyleType: "none" }} className="flex gap-3">
+                                    {footerLinks[0].links.map((item, index) => (
+                                        <li key={index}>{item.text}</li>
+                                    ))}
+                            </ul>
+                            <div className="mt-1 w-[5px] h-[5px] rounded-full bg-white"></div>
+                            <ul style={{ listStyleType: "none" }} className="flex gap-3">
+                                    {footerLinks[1].links.map((item, index) => (
+                                        <li key={index}>{item.text}</li>
+                                    ))}
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <p className="leading-[14px]" id="time">18:24</p> 
+                        <p>France</p> 
+                    </div>
+                  </main>
+            </div>
 		</footer>
 	);
 };

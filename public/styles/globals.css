@@ -4,7 +4,7 @@
 
 @layer components {
   .badge {
-      @apply bg-gray-muted font-normal rounded-lg inline-block text-white px-4 py-1
+      @apply bg-gray-muted font-normal rounded-lg inline-block text-white px-4 py-1;
   }
 }
 
@@ -18,38 +18,38 @@
   }
 
   .title {
-    @apply text-6xl font-black 
+    @apply text-6xl font-black;
   }
 
   .title-2x {
-    @apply text-7xl font-black 
+    @apply text-7xl font-black;
   }
 
   .text {
-    @apply text-lg
+    @apply text-lg;
   }
 
   @media screen and (max-width:1280px){
     .title {
-      @apply text-5xl font-black 
+      @apply text-5xl font-black; 
     }
 
     .title-2x {
-      @apply text-6xl font-black 
+      @apply text-6xl font-black; 
     }
   }
 
   @media screen and (max-width:1080px){
     .title {
-      @apply text-4xl font-black 
+      @apply text-4xl font-black; 
     }
 
     .title-2x {
-      @apply text-5xl font-black 
+      @apply text-5xl font-black; 
     }
 
     .text {
-      @apply text-base
+      @apply text-base;
     }
   }
 }
