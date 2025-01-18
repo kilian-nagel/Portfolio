@@ -117,7 +117,7 @@ export default function Page() {
 			<main className="section-padding">
 				<div>
 					<h1
-						className="title fs-700 bold-900">
+						className="title fs-700 bold-900 mb-2">
 						Apprentissages
 					</h1>
 					<div>
