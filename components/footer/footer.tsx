@@ -1,22 +1,23 @@
 "use client";
 import React, { useEffect } from "react";
+import Link from "next/link"
 
 const footerLinks = [
 	{
 		sectionTitle: "Contact",
 		links: [
 			{
-				text: "Email",
+				text: "email",
 				url: "mailto:nagelkilian05@gmail.com",
 				ariaText: "me contacter par email",
 			},
 			{
-				text: "Github",
+				text: "github",
 				url: "https://github.com/kilian-nagel",
 				ariaText: "se rendre sur ma page github",
 			},
 			{
-				text: "LinkedIn",
+				text: "linkedIn",
 				url: "https://fr.linkedin.com/in/kilian-nagel",
 				ariaText: "se rendre sur ma page linkedIn",
 			},
@@ -26,19 +27,24 @@ const footerLinks = [
 		sectionTitle: "Navigation",
 		links: [
 			{
-				text: "Biographie",
+				text: "biographie",
 				url: "/#biographie",
 				ariaText: "se rendre sur la partie biographie",
 			},
 			{
-				text: "Projets",
+				text: "projets",
 				url: "/#projects",
 				ariaText: "se rendre sur la page projets",
 			},
 			{
-				text: "Projet professionnel",
+				text: "projet professionnel",
 				url: "/#projet-professionnel",
 				ariaText: "se rendre sur la page projet professionnel",
+			},
+			{
+				text: "expériences",
+				url: "/experiences",
+				ariaText: "se rendre sur la page expériences",
 			},
 		],
 	},
@@ -77,13 +83,13 @@ export const Footer: React.FC = () => {
                         <div className="flex items-center gap-5"> 
                             <ul style={{ listStyleType: "none" }} className="flex gap-3">
                                     {footerLinks[0].links.map((item, index) => (
-                                        <li key={index}>{item.text}</li>
+                                        <Link href={item.url} key={index}>{item.text}</Link>
                                     ))}
                             </ul>
                             <div className="mt-1 w-[5px] h-[5px] rounded-full bg-white"></div>
                             <ul style={{ listStyleType: "none" }} className="flex gap-3">
                                     {footerLinks[1].links.map((item, index) => (
-                                        <li key={index}>{item.text}</li>
+                                        <Link href={item.url} key={index}>{item.text}</Link>
                                     ))}
                             </ul>
                         </div>
