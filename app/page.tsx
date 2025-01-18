@@ -1,7 +1,6 @@
 'use client'
 import "react-loading-skeleton/dist/skeleton.css";
 import Image from "next/image";
-import { useRef } from 'react';
 import { SkillSection } from "@/components/skills/skill";
 import { Carousel } from "@/components/carousel";
 import { TechnologyContainer } from "@/components/technologyContainer";
@@ -84,13 +83,25 @@ const technologies = [
 
 const parcours = [
 	{
-		title: "Développeur web",
+		title: "Alternant dév web",
+		text: "Développement d'un portail sécurité avec contrôles d'accès par role. Traitement automatique de mail et génration de licences",
+        location: "Optima Concept, Barbentanes",
+        date: "10/2024 - en cours"
+	},
+	{
+		title: "Stage dév web junior et CI/CD",
+		text: "Développement web front-end, virtualisation et déploiement CI/CD de l'infrastructure.",
+        location: "Optima Concept, Barbentanes",
+        date: "04/2024 - 06/2024"
+	},
+	{
+		title: "Développeur web junior",
 		text: "Développement web et APIs RESTFul, virtualisation et déploiement CI/CD.",
-        location: "IUT Montpellier-Sète / Montpellier, France",
+        location: "Optima Concept, Barbentanes",
         date: "07/2024 - 08/2024"
 	},
 	{
-		title: "Parcours au supérieur",
+		title: "Parcours dans le supérieur",
 		text: "Acquisition du BUT (bachelor universitaire de technologie) en cours.",
         location: "IUT Montpellier-Sète / Montpellier, France",
         date: "09/2022 - en cours"
@@ -379,16 +390,14 @@ export default function Page() {
                     className="title mt-2 pb-3">
                     Parcours
                   </h2>   
-                  <p className="text pb-6">Découvrez mon parcours scolaire.</p> 
-				  <div className="content gap-3 flex flex-1 max-w-[900px]">
-
+                  <p className="text pb-6">Découvrez mon parcours scolaire et professionnel</p> 
+				  <div className="content gap-3 flex flex-1 overflow-auto pb-3">
 						{parcours.map((p,i) => (
 						        <ParcoursContainer
 								key={Math.random()}
 								title={p.title}
 								text={p.text}
                                 date={p.date}
-						          index={i+1}
 							/>))}
 				  </div>
 				</section>
