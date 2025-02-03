@@ -47,3 +47,44 @@ main {
         display:none
     }
 }
+
+.parcours-card {
+  perspective: 1000px; /* Adds depth for 3D effect */
+}
+
+.parcours-card .card {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d; /* Ensures 3D perspective is maintained */
+  overflow: hidden; /* Ensures the animated dash doesn't overflow */
+}
+
+.parcours-card .card:hover {
+  transform: rotateY(10deg) rotateX(10deg); /* 3D rotation on hover */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Adds a hover shadow */
+}
+
+/* Blue dash animation only on hover */
+.parcours-card .card:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start outside the card */
+  width: 100%;
+  height: 400px; /* Adjust height for a thinner dash */
+  background: linear-gradient(to right, transparent, #222222, transparent); /* Blue gradient dash */
+  animation: dash .6s linear;
+}
+
+@keyframes dash {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+

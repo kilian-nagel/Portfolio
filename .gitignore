@@ -4,3 +4,5 @@ node_modules/
 .next/
 .env*
 *yaml
+public/styles/output.css
+

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSectionSwitcher } from '../../hooks/useSectionSwitcher.ts';
+import { useSectionSwitcher } from '@/hooks/useSectionSwitcher';
 
 interface Section {
   title: string;
@@ -7,13 +7,13 @@ interface Section {
 }
 
 export const SkillSection: React.FC<{ skills: Section[] }> = ({ skills }) => {
-  const { setCounter, setSection, counter, section, isChanging, setAnimationState
+  const { setSection, counter, section, isChanging, setAnimationState
  } = useSectionSwitcher(skills);
 
   return (
     <div className="flex flex-col lg:flex-row lg:gap-20 gap-8">
       <div className="flex flex-col gap-8 my-8 w-full lg:w-auto">
-        {skills.map((content, i) => (
+        {skills.map((skill, i) => (
           <div key={i}>
             <p
               onClick={() => {setSection(i);setAnimationState(false)}}
@@ -22,12 +22,12 @@ export const SkillSection: React.FC<{ skills: Section[] }> = ({ skills }) => {
                 (section === i ? "text-white" : "text-[#777777]")
               }
             >
-              {skills[i].title}
+              {skill.title}
             </p>
 
             {/* Show the active section's text under its title on mobile */}
             <div className={"lg:hidden " + (section === i ? "block" : "hidden")}>
-              <p className="text-xl mt-4">{skills[i].text}</p>
+              <p className="text-xl mt-4">{skill.text}</p>
             </div>
           </div>
         ))}

@@ -16,7 +16,7 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/styles/*" : ["public/styles/*"],
-      "@/hooks/*" : ["hooks/"],
+      "@/hooks/*" : ["hooks/*"],
       "react": [ "./node_modules/@types/react" ]
     },
     "plugins": [

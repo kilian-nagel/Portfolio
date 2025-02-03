@@ -1,17 +1,6 @@
 "use client";
-import "../public/styles/footer.css";
-import "../public/styles/navbar.css";
-import "../public/styles/normalize.css";
-import "../public/styles/project-1.css";
-import "../public/styles/projet-professionnel.css";
-import "../public/styles/reset.css";
-import "../public/styles/utility.css";
-import "../public/styles/style.css";
-import "../public/styles/variables.css";
-import { Navbar } from "../components/nav/navbar";
-import { Footer } from "../components/footer";
-import { Skill } from "../components/skills/skillContainer";
-import { Preview } from "../components/preview/preview";
+import { Skill } from "@/components/skills/skillContainer";
+import { Preview } from "@/components/preview/preview";
 import { useState } from "react";
 
 const parts1 = [
@@ -119,17 +108,16 @@ const data = [
 	},
 ];
 
-export default function apprentissages() {
+export default function Page() {
 	const [display, setDisplay] = useState(false);
 	const [url, setUrl] = useState("");
 	return (
 		<>
-			<Navbar />
 			<Preview url={url} display={display} setDisplay={setDisplay} />
-			<main style={{ padding: "var(--spacing-md) var(--spacing-xl)" }}>
+			<main className="section-padding">
 				<div>
 					<h1
-						className="title fs-700 bold-900">
+						className="title fs-700 bold-900 mb-2">
 						Apprentissages
 					</h1>
 					<div>
@@ -150,7 +138,6 @@ export default function apprentissages() {
 					/>
 				))}
 			</main>
-			<Footer />
 		</>
 	);
 }

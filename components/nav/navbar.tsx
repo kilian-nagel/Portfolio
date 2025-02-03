@@ -16,7 +16,8 @@ export const linksItems: item[] = [
 	{ textContent: "accueil", url: "/" },
 	{ textContent: "projets", url: "/#projects" },
 	{textContent:"apprentissages",url:"/apprentissages"},
-	{ textContent: "contact", url: "/contact" }
+	{ textContent: "contact", url: "/contact" },
+	{ textContent: "expériences", url: "/experiences" }
 ];
 
 export const Navbar: React.FC = () => {

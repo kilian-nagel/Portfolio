@@ -11,15 +11,6 @@ import { Category } from "@/components/projectPage/category";
 import Skeleton from "react-loading-skeleton";
 import { RoundBadge } from "@/components/roundBadge";
 
-import "@/styles/footer.css";
-import "@/styles/navbar.css";
-import "@/styles/normalize.css";
-import "@/styles/project-1.css";
-import "@/styles/projet-professionnel.css";
-import "@/styles/reset.css";
-import "@/styles/utility.css";
-import "@/styles/style.css";
-import "@/styles/variables.css";
 
 function extractH2Elements(htmlString: string): string {
 	const parser = new DOMParser();
@@ -136,20 +127,16 @@ export default function Page({ params }: { params: { id: string } }) {
 	// On nettoie le html fourni par le CRM avant de l'injecter
 
 	return (
-		<main>
+		<main className="section-padding">
 			<section
-				id="presentation"
-				style={{
-					justifyContent: "space-between",
-					alignItems: "flex-end",
-					marginBottom: "var(--spacing-xl)",
-				}}>
-				<div className="info">
-					<div className="up">
+        className="flex justify-between items-end gap-md flex-col lg:flex-row lg:gap-lg my-12"
+				id="presentation">
+				<div className="py-0.5 text-[14px]">
+					<div className="up mb-4">
 						<h3 className="bold-900 fs-900">{project.title}</h3>
-						<div className="badges">
+						<div className="pt-2 flex flex-wrap gap-2 mb-mdpt-2 flex flex-wrap gap-2 mb-4">
 							{project.tags.map((tag) => (
-								<Badge key={Math.random()} text={tag} />
+								<Badge style_class="inline-block bg-background-muted-dark text-white px-4 py-1 rounded-md text-[14px] sm:px-1 sm:py-0.2 sm:text-[14px]" key={Math.random()} text={tag} />
 							))}
 						</div>
 						<p className="text fs-200" style={{ maxWidth: 600 }}>
@@ -219,9 +206,7 @@ export default function Page({ params }: { params: { id: string } }) {
 
 			<div
 				style={{
-					maxWidth: "1500px",
 					height: 650,
-					padding: "0 var(--spacing-xl)",
 					margin: "0 auto",
 				}}>
 				<div
@@ -232,15 +217,15 @@ export default function Page({ params }: { params: { id: string } }) {
 					}}></div>
 			</div>
 
-			<div id="sections">
-				<aside id="aside">
-					<div className="content">
+			<div id="sections" className="flex items-start gap-16 py-[var(--spacing-xxl)]">
+				<aside id="aside" className="min-w-[300px] sticky top-12">
+					<div className="content content bg-[rgb(10,10,10)] rounded-lg p-[var(--spacing-sm)] flex flex-col">
 						<p className="text bold-700">Navigation</p>
 						<ul
 							style={{ listStyle: "none" }}
 							dangerouslySetInnerHTML={{ __html: navList }}></ul>
 					</div>
-					<a id="top-link" href="#header">
+					<a id="top-link" className="block p-[var(--spacing-sm2)] px-[var(--spacing-sm)]" href="#header">
 						aller à l'en-tête de page
 					</a>
 				</aside>

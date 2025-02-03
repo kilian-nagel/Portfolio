@@ -1,13 +1,10 @@
 'use client'
 import "react-loading-skeleton/dist/skeleton.css";
 import Image from "next/image";
-import { useRef } from 'react';
-import { SkillContainer } from "@/components/skillContainer";
 import { SkillSection } from "@/components/skills/skill";
 import { Carousel } from "@/components/carousel";
 import { TechnologyContainer } from "@/components/technologyContainer";
 import { ParcoursContainer } from "@/components/parcoursContainer";
-import { useSectionSwitcher } from "@/hooks/useSectionSwitcher";
 
 import "@/styles/footer.css";
 import "@/styles/navbar.css";
@@ -19,8 +16,6 @@ import "@/styles/utility.css";
 import "@/styles/style.css";
 import "@/styles/variables.css";
 import "@/styles/output.css";
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 
 const developmentSkills = [
 	{
@@ -88,24 +83,44 @@ const technologies = [
 
 const parcours = [
 	{
-		title: "Supérieur",
+		title: "Alternant dév web",
+		text: "Développement d'un portail sécurité avec contrôles d'accès par role. Traitement automatique de mail et génration de licences",
+        location: "Optima Concept, Barbentanes",
+        date: "10/2024 - en cours"
+	},
+	{
+		title: "Stage dév web junior et CI/CD",
+		text: "Développement web front-end, virtualisation et déploiement CI/CD de l'infrastructure.",
+        location: "Optima Concept, Barbentanes",
+        date: "04/2024 - 06/2024"
+	},
+	{
+		title: "Développeur web junior",
+		text: "Développement web et APIs RESTFul, virtualisation et déploiement CI/CD.",
+        location: "Optima Concept, Barbentanes",
+        date: "07/2024 - 08/2024"
+	},
+	{
+		title: "Parcours dans le supérieur",
 		text: "Acquisition du BUT (bachelor universitaire de technologie) en cours.",
-		info: "IUT Montpellier-Sète / Montpellier, France / 2022 - présent",
+        location: "IUT Montpellier-Sète / Montpellier, France",
+        date: "09/2022 - en cours"
 	},
 	{
-		title: "Lycée",
+		title: "Parcours au lycée",
 		text: "Obtention du baccalauréat mention très bien (2022).",
-		info: "Lycée Albert Einstein / Bagnols-sur-cèze, France / 2019 - 2022",
+		location: "Lycée Albert Einstein / Bagnols-sur-cèze, France",
+        date: "09/2019 - 07/2022"
 	},
 	{
-		title: "Collège",
+		title: "Parcours au collège",
 		text: "Obtention du brevet des collèges mention très bien (2019).",
-		info: "Collège Georges-ville / Pont-saint-esprit, France / 2015 - 2019",
+		location: "Collège Georges-ville / Pont-saint-esprit, France",
+        date: "09/2015- 07/2019"
 	},
 ];
 
 export default function Page() {
-  const text_ref = useRef();
 	return (
 		<>
 			<main>
@@ -117,7 +132,7 @@ export default function Page() {
                   <span className="size-1.5 inline-block rounded-full bg-[#FFFFFF]"></span>
                   En cours de 3ème année de BUT informatique.
                 </span>
-								<h1 ref={text_ref} className="title-2x leading-tight">
+								<h1 className="title-2x leading-tight">
 									Kilian Nagel
 								</h1>
 							</div>
@@ -143,7 +158,7 @@ export default function Page() {
 									<a
 										className="text fs-200"
 										href="mailto:nagelkilian05@gmail.com">
-										Me contacter
+                                        Me contacter
 									</a>
 								</div>
 								<div className="rounded-md flex flex-col justify-start items-start gap-3 p-5 container border-solid border-[#222222] border-2">
@@ -188,8 +203,8 @@ export default function Page() {
 								right: 120,
 								zIndex: -5,
 							}}
-							width={400}
-							height={400}
+							width={300}
+							height={300}
 							alt=""
 							priority={true}
 						/>
@@ -370,53 +385,24 @@ export default function Page() {
 					</div>
 				</section>
 
-				<section className="pb-2 mt-14 section-margin flex flex-col lg:flex-column lg:flex-row gap-4 md:gap-8 lg:gap-14 flex-1" id="parcours">
-					<div className="flex p-8 bg-gray lg:min-h-[450px] gap-14 justify-between flex-column lg:min-w-[400px] rounded-lg">
-            <div>
-              <h2
-                className="title mt-2 mb-2 pb-0">
-                Parcours
-              </h2>   
-              <p className="text">Découvrez mon parcours scolaire.</p>
-            </div>
-            <div className="flex lg:justify-between justify-end items-end">
-               <p className="rotate-180 text-xs hidden lg:block" style={{ writingMode: 'vertical-rl' }}>educationnal background</p>
-               <div className="bg-[#0C8CE9] rounded-full p-2 rotate-180 lg:rotate-0">
-                <Image className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"
-                      width={50}
-                      height={50}
-                      src="/media/icones/arrow-diagonal.svg"
-                      alt="flèche"
-                    />
-               </div>
-            </div>
-          </div>
-          
-					<div className="content flex flex-1 flex-column max-w-[900px]">
+				<section className="pb-2 mt-14 section-margin flex flex-col flex-1" id="parcours">
+                  <h2
+                    className="title mt-2 pb-3">
+                    Parcours
+                  </h2>   
+                  <p className="text pb-6">Découvrez mon parcours scolaire et professionnel</p> 
+				  <div className="content gap-3 flex flex-1 overflow-auto pb-3">
 						{parcours.map((p,i) => (
-							<div>
-              <ParcoursContainer
+						        <ParcoursContainer
 								key={Math.random()}
 								title={p.title}
 								text={p.text}
-								info={p.info}
-                index={i+1}
-							/>
-              {i != technologies.length - 1 ? (
-										<div
-											className="separator bg-gray-muted h-[2px]"
-											style={{
-												margin: "1.25rem 0 1rem 0",
-											}}></div>
-									) : (
-										""
-									)}
-                  </div>
-						))}
-					</div>
+                                date={p.date}
+							/>))}
+				  </div>
 				</section>
 
-			<section class="hidden" id="projet-professionnel" style={{maxWidth:"1500px",padding:"0 var(--spacing-xl)"}}>
+			<section className="hidden" id="projet-professionnel" style={{maxWidth:"1500px",padding:"0 var(--spacing-xl)"}}>
 					<h2 className="bold-900 fs-700">Projet professionnel</h2>
 					<p className="text">
 						Je vise à devenir développeur web avec une

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 
 interface Section {
   title: string;
-  content: string;
+  text: string;
 }
 
 function cubicBezier(p0, p1, p2, p3, t) {

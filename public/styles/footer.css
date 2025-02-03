@@ -2,7 +2,7 @@
     border-top: solid 2px rgb(20, 20, 20);
 }
 #footer .content {
-    padding: var(--spacing-xl) var(--spacing-xl);
+    padding: var(--spacing-xl) 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
