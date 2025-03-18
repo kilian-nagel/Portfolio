@@ -1,25 +1,42 @@
 'use client';
 import useSWR from 'swr';
-import { IShortProjectsApiResponse, IProject } from './interfaces/project';
-import { ProjectCard } from './projectCard/projectCard';
-import { fetcher } from '../data/fetch';
-import { getShortProjectQuery } from '../data/queries';
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import {useRef} from 'react';
+import {IShortProjectsApiResponse} from './interfaces/project';
+import {ProjectCard} from './projectCard/projectCard';
+import {fetcher} from '../data/fetch';
+import {getShortProjectQuery} from '../data/queries';
+import Skeleton from 'react-loading-skeleton';
 
 export const Carousel: React.FC = () => {
     // On récupére les différents projets dans un format court.
-    const { data, isLoading, error } = useSWR<
-        IShortProjectsApiResponse | undefined
-    >(
-        !process.env.NEXT_PUBLIC_API_URL
-            ? null
-            : process.env.NEXT_PUBLIC_API_URL,
-        () =>
-            fetcher<IShortProjectsApiResponse>(
-                process.env.NEXT_PUBLIC_API_URL || '',
-                getShortProjectQuery()
-            )
+    const key = process.env.NEXT_PUBLIC_API_URL ? ['shortProjects', process.env.NEXT_PUBLIC_API_URL] : null;
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    const {data, isLoading, error} = useSWR<IShortProjectsApiResponse | undefined>(
+        key,
+        () => fetcher<IShortProjectsApiResponse>(process.env.NEXT_PUBLIC_API_URL || '', getShortProjectQuery()),
+        {
+            dedupingInterval: 0, // Always refetch
+            revalidateIfStale: true, // Always revalidate if data is stale
+            revalidateOnFocus: true, // Refetch when window gets focused
+            revalidateOnReconnect: true, // Refetch on network reconnect
+        }
     );
+
+
+    const scrollLeft = () => {
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollBy({left: -200, behavior: "smooth"});
+        }
+    };
+
+    const scrollRight = () => {
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollBy({left: 200, behavior: "smooth"});
+        }
+    };
+
+
     const repeatedElements = new Array(4).fill(null).map((_, index) => (
         <div
             key={index}
@@ -81,19 +98,33 @@ export const Carousel: React.FC = () => {
     }
 
     return (
-        <>
-            <div className="flex relative gap-4 overflow-y-hidden overflow-x-scroll pb-4">
+        <div className="flex gap-4 relative">
+            <button
+                className="absolute left-2 top-1/2 -translate-y-[55px] flex justify-center items-center z-10 w-14 h-14 text-white p-2 rounded-full shadow-md text-2xl" style={{"backdropFilter": "blur(16px)", background: "rgba(0,0,0, 0.6)"}}
+                onClick={scrollLeft}
+            >{"<"}</button>
+
+            <div
+                ref={scrollContainerRef}
+                className="flex relative gap-4 overflow-y-hidden overflow-x-scroll pb-4">
                 {data.data.posts.map((d) => (
                     <ProjectCard
                         key={Math.random()}
-                        title={d.title}
-                        id={d.id}
-                        tags={d.tags}
-                        excerpt={d.excerpt}
-                        coverImage={d.coverImage}
+                        title={d?.title}
+                        id={d?.id}
+                        tags={d?.tags}
+                        excerpt={d?.excerpt}
+                        coverImage={d?.coverImage}
                     ></ProjectCard>
                 ))}
             </div>
-        </>
+
+            <button
+                className="absolute right-2 top-1/2 -translate-y-[55px] flex justify-center items-center right-0 w-14 h-14 z-10 bg-gray-800 text-white p-2 rounded-full shadow-md hover:bg-gray-700 text-2xl" style={{"backdropFilter": "blur(16px)", background: "rgba(0,0,0, 0.6)"}}
+                onClick={scrollRight}
+            >
+                {">"}
+            </button>
+        </div>
     );
 };
